@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/Blog/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Blog/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Blog/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/Blog/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/Blog/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/Blog/',
+    scheme: 'Gemini',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="线性表线性表：零个或多个数据元素的有限序列 定义若将线性表记为（a(1),…,a(i-1),a(i),a(i+1),…a(n)）,则表中a(i-1)领先于a(i),a(i)领先于a(i+1)，称a(i-1)是a(i)的直接前驱元素，a(i+1)是a(i)的直接后继元素，当i=1,2,…,n-1时，a(i)有且仅有一个直接后继元素，当i=2,3,…,n时，a(i)有且仅有一个直接前驱元素。线性表元素">
+<meta name="keywords" content="数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性表">
+<meta property="og:url" content="https://ningning666.github.io/Blog/posts/8.html">
+<meta property="og:site_name" content="宁宁的学习笔记">
+<meta property="og:description" content="线性表线性表：零个或多个数据元素的有限序列 定义若将线性表记为（a(1),…,a(i-1),a(i),a(i+1),…a(n)）,则表中a(i-1)领先于a(i),a(i)领先于a(i+1)，称a(i-1)是a(i)的直接前驱元素，a(i+1)是a(i)的直接后继元素，当i=1,2,…,n-1时，a(i)有且仅有一个直接后继元素，当i=2,3,…,n时，a(i)有且仅有一个直接前驱元素。线性表元素">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-01T06:08:08.614Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="线性表">
+<meta name="twitter:description" content="线性表线性表：零个或多个数据元素的有限序列 定义若将线性表记为（a(1),…,a(i-1),a(i),a(i+1),…a(n)）,则表中a(i-1)领先于a(i),a(i)领先于a(i+1)，称a(i-1)是a(i)的直接前驱元素，a(i+1)是a(i)的直接后继元素，当i=1,2,…,n-1时，a(i)有且仅有一个直接后继元素，当i=2,3,…,n时，a(i)有且仅有一个直接前驱元素。线性表元素">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://ningning666.github.io/Blog/posts/8">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>线性表 | 宁宁的学习笔记</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/Blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">宁宁的学习笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-主页">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>主页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-标签">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-分类">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-归档">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/8.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ningning">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宁宁的学习笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">线性表
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-28 13:53:49" itemprop="dateCreated datePublished" datetime="2019-07-28T13:53:49+08:00">2019-07-28</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-08-01 14:08:08" itemprop="dateModified" datetime="2019-08-01T14:08:08+08:00">2019-08-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><p>线性表：零个或多个数据元素的有限序列</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>若将线性表记为（a(1),…,a(i-1),a(i),a(i+1),…a(n)）,则表中a(i-1)领先于a(i),a(i)领先于a(i+1)，称a(i-1)是a(i)的直接前驱元素，<br>a(i+1)是a(i)的直接后继元素，<br>当i=1,2,…,n-1时，a(i)有且仅有一个直接后继元素，当i=2,3,…,n时，a(i)有且仅有一个直接前驱元素。<br>线性表元素的个数n（n&gt;=0）定义线性表的长度，当n=0时，称为空表。</p>
+<h3 id="线性表的抽象数据类型"><a href="#线性表的抽象数据类型" class="headerlink" title="线性表的抽象数据类型"></a>线性表的抽象数据类型</h3><p>定义如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ADT 线性表（List）</span><br><span class="line">Data</span><br><span class="line">    线性表的数据对象集合为&#123;a1,a2,...,an&#125;，每个元素的类型均为DataType。其中，除第一个元素a1外，</span><br><span class="line">    每一个元素有且只有一个直接前驱元素，除了最后一个元素an外，每一个元素有且只有一个直接后继元素。</span><br><span class="line">    数据元素之间的关系是一对一的关系。</span><br><span class="line">Operation</span><br><span class="line">    InitList(*L)： 初始化操作，建立一个空的线性表L。</span><br><span class="line">    ListEmpty(L)： 若线性表为空，返回<span class="literal">true</span>，否则返回<span class="literal">false</span>。</span><br><span class="line">    ClearList(*L)：将线性表清空。</span><br><span class="line">    GetElem(L,i,*e)：将线性表L中的第i个位置元素值返回给e。</span><br><span class="line">    LocateElem(L,e): 在线性表L中查找与给定值e相等的元素，如果查找成功，返回该元素在表中序号表示成功；否则，返回0表示失败。</span><br><span class="line">    ListInsert(*L,i,e)：在线性表L中的第i个位置插入新元素e。</span><br><span class="line">    ListDelete(*L,i,*e): 删除线性表L中第i个位置元素，并用e返回其值。</span><br><span class="line">    ListLength(L)：返回线性表L的元素个数。</span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
+
+<p>对于不同的应用，线性表的基本操作是不同的，上述操作是最基本的，对于实际问题中涉及的关于线性表的更复杂操作，完全可以用这些基本操作的组合来实现。<br>示例：比如，要实现两个线性表集合A和B的并集操作。即要使得集合A=A∪B，说白了，就是把存在集合B中的但不存在A中的数据元素插入到A中即可。<br>假设La表示集合A，Lb表示集合B，则实现的代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/*将所有的在线性表Lb中但不在La中的数据元素插入到La中*/</span><br><span class="line">void union(List *La,List Lb)&#123;</span><br><span class="line">    int La_len,Lb_len,i;</span><br><span class="line">    ElemType e;             /*声明与La和Lb相同的数据元素e */</span><br><span class="line">    La_len = ListLength(La); /*求线性表的长度*/</span><br><span class="line">    Lb_len = ListLength(Lb)</span><br><span class="line">    <span class="keyword">for</span> (i=1; i&lt;=Lb_len; i++) &#123;</span><br><span class="line">        GetElem(Lb,i,e);    /*取Lb中第i个数据元素赋给e*/</span><br><span class="line">        <span class="keyword">if</span>(!LocateElem(La,e,equal))  /*La中不存在和e相同数据元素*/</span><br><span class="line">        &#123;</span><br><span class="line">            ListInsert(La,++La_len,e);  /*插入*/</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h3><p>线性表的顺序存储结构：指的是用一段地址连续的存储单元依次存储线性表的数据元素。<br>线性表的顺序存储的结构代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">define MAXSIZE 20   /*存储空间初始分配量*/</span><br><span class="line">typedef int ElemType  /*ElemType 类型根据实际情况而定，这里假设为int*/</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">    ElemType data[MAXSIZE];   /*数组存储数据元素，最大值为MAXSIZE*/</span><br><span class="line">    int length;               /*线性表当前长度*/</span><br><span class="line">&#125;Sqlist；</span><br></pre></td></tr></table></figure>
+
+<p>顺序存储结构需要三个属性：</p>
+<ul>
+<li>存储空间的起始位置：数组data，它的存储位置就是存储空间的存储位置。</li>
+<li>线性表的最大存储容量：数组长度MaxSize。</li>
+<li>线性表的当前长度：length。</li>
+</ul>
+<p>注意：线性表的长度与数组的长度是不一样的，线性表的长度是线性表中数据元素的个数，随着线性表插入和删除操作的进行，<br>这个量是变化的；数组的长度指的是线性表存放线性表的存储空间的长度，在任意时刻，线性表的长度小于等于数组的长度。</p>
+<h3 id="顺序存储结构的插入与删除"><a href="#顺序存储结构的插入与删除" class="headerlink" title="顺序存储结构的插入与删除"></a>顺序存储结构的插入与删除</h3><h5 id="获得元素操作"><a href="#获得元素操作" class="headerlink" title="获得元素操作"></a>获得元素操作</h5><p>对于顺序存储结构来说，如果我们要实现GetElem操作，只要i的数值在数组下标范围内，就是把数组第i-1下标的值返回即可。<br>示例代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#define OK 1</span></span><br><span class="line"><span class="comment">#define ERROR 0</span></span><br><span class="line"><span class="comment">#define TRUE 1</span></span><br><span class="line"><span class="comment">#define FALSE 0</span></span><br><span class="line">typedef int Status;</span><br><span class="line">/*Status 是函数的类型，其值是函数结果状态代码，如OK等*/</span><br><span class="line">/*初始条件：顺序线性表 L 已存在，1&lt;=i&lt;=ListLength(L)*/</span><br><span class="line">/*操作结果：用e返回L中第i个数据元素的值*/</span><br><span class="line">Status GetElem (SqList L,int i,ElemType *e)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(L.length==0 || i&lt;1 || i&gt;L.Length)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    *e=L.data[i-1];</span><br><span class="line">    <span class="built_in">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h5><p>插入算法的思路：</p>
+<ul>
+<li>如果插入位置不合理，抛出异常；</li>
+<li>如果线性表长度大于等于数组长度，则抛出异常或动态增加容量</li>
+<li>从最后一个元素开始向前遍历到第i个位置，分别将它们都向后移动一位</li>
+<li>将要插入元素填入位置i处</li>
+<li>表长加1<br>实现代码如下：<br>/* 初始条件：顺序线性表L已存在，1&lt;=i&lt;=ListLength(L)<em>/
+/</em> 操作结果：在L中第i个位置之前插入新的数据元素e，L的长度加1<em>/
+Status ListInsert (SqList *L,int i,ElemType e)<br>{
+  int k;<br>  if (ListLength(L)==MAXSIZE)  /</em> 顺序线性表已经满 */<br>  {<pre><code>return ERROR;</code></pre>  }<br>  if (i&lt;1 || i&gt;ListLength+1) /* 当i不在范围内时*/<br>  {<pre><code>return ERROR;</code></pre>  }<br>  if (i&lt;=ListLength)  /* 若插入数据位置不在表尾 */<br>}</li>
+</ul>
+<p>} </p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/Blog/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Blog/posts/7.html" rel="next" title="算法">
+                <i class="fa fa-chevron-left"></i> 算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Blog/posts/9.html" rel="prev" title="python面向对象">
+                python面向对象 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ningning</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/Blog/archives">
+                
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/Blog/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">Kategorien</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/Blog/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">schlagwörter</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表"><span class="nav-number">1.</span> <span class="nav-text">线性表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表的抽象数据类型"><span class="nav-number">1.2.</span> <span class="nav-text">线性表的抽象数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表的顺序存储结构"><span class="nav-number">1.3.</span> <span class="nav-text">线性表的顺序存储结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序存储结构的插入与删除"><span class="nav-number">1.4.</span> <span class="nav-text">顺序存储结构的插入与删除</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#获得元素操作"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">获得元素操作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#插入操作"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">插入操作</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ningning</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/Blog/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/Blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/Blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/Blog/js/utils.js?v=7.1.2"></script>
+
+  <script src="/Blog/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/Blog/js/affix.js?v=7.1.2"></script>
+
+  <script src="/Blog/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/Blog/js/scrollspy.js?v=7.1.2"></script>
+<script src="/Blog/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/Blog/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

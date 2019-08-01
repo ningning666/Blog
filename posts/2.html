@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/Blog/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Blog/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Blog/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/Blog/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/Blog/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/Blog/',
+    scheme: 'Gemini',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="数据类型和变量数据类型数据类型分为整数、浮点数、字符串、布尔值和空值 变量变量可以是数字与任意数据类型 字符编码字符编码使用UTF-8标准 Python的字符串Python的字符串支持多语言，对于单个字符的编码，Python提供了ord()函数获取字符的整数表示，chr()函数把编码转换为对应的字符由于Python的字符串类型是str，在内存中以Unicode表示，一个字符对应若干个字节。如果要在">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python 基础">
+<meta property="og:url" content="https://ningning666.github.io/Blog/posts/2.html">
+<meta property="og:site_name" content="宁宁的学习笔记">
+<meta property="og:description" content="数据类型和变量数据类型数据类型分为整数、浮点数、字符串、布尔值和空值 变量变量可以是数字与任意数据类型 字符编码字符编码使用UTF-8标准 Python的字符串Python的字符串支持多语言，对于单个字符的编码，Python提供了ord()函数获取字符的整数表示，chr()函数把编码转换为对应的字符由于Python的字符串类型是str，在内存中以Unicode表示，一个字符对应若干个字节。如果要在">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-01T06:06:20.020Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python 基础">
+<meta name="twitter:description" content="数据类型和变量数据类型数据类型分为整数、浮点数、字符串、布尔值和空值 变量变量可以是数字与任意数据类型 字符编码字符编码使用UTF-8标准 Python的字符串Python的字符串支持多语言，对于单个字符的编码，Python提供了ord()函数获取字符的整数表示，chr()函数把编码转换为对应的字符由于Python的字符串类型是str，在内存中以Unicode表示，一个字符对应若干个字节。如果要在">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://ningning666.github.io/Blog/posts/2">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>python 基础 | 宁宁的学习笔记</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/Blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">宁宁的学习笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-主页">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>主页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-标签">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-分类">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-归档">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/2.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ningning">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宁宁的学习笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python 基础
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-13 18:50:37" itemprop="dateCreated datePublished" datetime="2019-07-13T18:50:37+08:00">2019-07-13</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-08-01 14:06:20" itemprop="dateModified" datetime="2019-08-01T14:06:20+08:00">2019-08-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Python-知识汇总/" itemprop="url" rel="index"><span itemprop="name">Python 知识汇总</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>数据类型分为整数、浮点数、字符串、布尔值和空值</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量可以是数字与任意数据类型</p>
+<h2 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h2><p>字符编码使用UTF-8标准</p>
+<h3 id="Python的字符串"><a href="#Python的字符串" class="headerlink" title="Python的字符串"></a>Python的字符串</h3><p>Python的字符串支持多语言，对于单个字符的编码，Python提供了ord()函数获取字符的整数表示，chr()函数把编码转换为对应的字符<br>由于Python的字符串类型是str，在内存中以Unicode表示，一个字符对应若干个字节。如果要在网络上传输，或者保存到磁盘上，就需要把str变为以字节为单位的bytes。<br>Python对bytes类型的数据用带b前缀的单引号或双引号表示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = b<span class="string">'ABC'</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：区分’ABC’和b’ABC’，前者是str，后者虽然内容显示得和前者一样，但bytes的每个字符都只占用一个字节</p>
+<p>以Unicode表示的str通过encode()方法可以编码为指定的bytes<br>英文的str可以用ASCII编码为bytes，内容是一样的，含有中文的str可以用UTF-8编码为bytes。含有中文的str无法用ASCII编码，因为中文编码的范围超过了ASCII编码的范围，Python会报错。在bytes中，无法显示为ASCII字符的字节，用\x##显示。反过来，如果我们从网络或磁盘上读取了字节流，那么读到的数据就是bytes。要把bytes变为str，就需要用decode()方法<br>len()函数计算的是str的字符数，如果换成bytes，len()函数计算字节数</p>
+<h3 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h3><p>运算符就是用来格式化字符串的。在字符串内部，%s表示用字符串替换，%d表示用整数替换，有几个%?占位符，后面就跟几个变量或者值，顺序要对应好。如果只有一个%?，括号可以省略。<br>常见的占位符有：%d（整数） %f（浮点数） %s（字符串） %x（十六进制整数）<br>还有一种方式是format()方法<br>使用字符串的format()方法，它会用传入的参数依次替换字符串内的占位符{0}、{1}……，不过这种方式写起来比%要麻烦得多<br>示例如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'Hello, &#123;0&#125;, 成绩提升了 &#123;1:.1f&#125;%'</span>.format(<span class="string">'小明'</span>, 17.125)</span><br></pre></td></tr></table></figure>
+
+<h2 id="list和tuple"><a href="#list和tuple" class="headerlink" title="list和tuple"></a>list和tuple</h2><h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。<br>示例如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classmates = [<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>变量classmates就是一个list，list的索引是从0开始的，最后一个元素的索引是len(classmates)-1<br>除此之外，还可以用-1做索引,以此类推-2、-3等等</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;classmates[-1]</span><br><span class="line"><span class="string">'Tracy'</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="list中的经常使用的方法"><a href="#list中的经常使用的方法" class="headerlink" title="list中的经常使用的方法"></a>list中的经常使用的方法</h5><p>1.append()<br>list是一个可变的有序表，所以，可以往list中追加元素到末尾</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; classmates.append(<span class="string">'Adm'</span>)</span><br><span class="line">&gt;&gt;&gt; classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>, <span class="string">'Adm'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>2.insert()<br>list可以把元素插入到指定的位置，比如索引号为1的位置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; classmates.insert(1, <span class="string">'Jack'</span>)</span><br><span class="line">&gt;&gt;&gt; classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Jack'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>, <span class="string">'Adm'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>3.pop()<br>删除list末尾的元素</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; classmates.pop()</span><br><span class="line">&gt;&gt;&gt; classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Jack'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; classmates.pop(1)</span><br><span class="line">&gt;&gt;&gt; classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>pop(i)是删除指定位置的元素</p>
+<ol start="4">
+<li><p>把某个元素替换成别的元素</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; classmates[1] = <span class="string">'Sarah'</span></span><br><span class="line">&gt;&gt;&gt; classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Sarah'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list元素也可以是另一个list，比如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s = [<span class="string">'python'</span>, <span class="string">'java'</span>,[<span class="string">'asp'</span>, <span class="string">'php'</span>], <span class="string">'scheme'</span>]</span><br><span class="line">&gt;&gt;&gt; len(s)</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p>tuple是另一种有序列表即元祖，与list非常类似，但是tuple一旦初始化后就不能修改。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; classmates(<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>现在这个classmates不能修改了，没有append，insert，pop等方法，只能正常使用classmates[0],classmates[-1],但是不能赋值成其他元素。<br>使得代码更安全<br>定义只有一个元素的tuple时必须加逗号，避免歧义</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; t = (1)</span><br><span class="line">&gt;&gt;&gt; t</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; t = (1,)</span><br><span class="line">&gt;&gt;&gt; t</span><br><span class="line">(1)</span><br></pre></td></tr></table></figure>
+
+<p>这是因为Python规定，这种情况下，按小括号进行计算，计算结果自然是1。<br>tuple里也可以定义可变的list</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; t = (<span class="string">'a'</span>, <span class="string">'b'</span>, [<span class="string">'A'</span>, <span class="string">'B'</span>])</span><br><span class="line">&gt;&gt;&gt; t[2][0] = <span class="string">'X'</span></span><br><span class="line">&gt;&gt;&gt; t[2][1] = <span class="string">'Y'</span></span><br><span class="line">&gt;&gt;&gt; t</span><br><span class="line">(<span class="string">'a'</span>, <span class="string">'b'</span>, [<span class="string">'X'</span>, <span class="string">'Y'</span>])</span><br></pre></td></tr></table></figure>
+
+<h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><p>if、 if else、 if elif else</p>
+<h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">age = 20</span><br><span class="line"><span class="keyword">if</span> age &gt;= 18:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'your age is'</span>, age)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'adult'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="if-else语句"><a href="#if-else语句" class="headerlink" title="if else语句"></a>if else语句</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">age = 3</span><br><span class="line"><span class="keyword">if</span> age &gt;= 18:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'your age is'</span>, age)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'adult'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'your age is'</span>, age)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'teenager'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="if-elif-else语句"><a href="#if-elif-else语句" class="headerlink" title="if elif else语句"></a>if elif else语句</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">age = 3</span><br><span class="line"><span class="keyword">if</span> age &gt;= 18:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'adult'</span>)</span><br><span class="line"><span class="keyword">elif</span> age &gt;= 6:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'teenager'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'kid'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>##循环<br>Python 的循环有两种，一种是for…in循环，另一种是while循环。</p>
+<h3 id="for…in循环"><a href="#for…in循环" class="headerlink" title="for…in循环"></a>for…in循环</h3><p>作用是依次把list或者tuple中的每个元素迭代出来。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">    <span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+
+<p>输出结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Michael</span><br><span class="line">Bob</span><br><span class="line">Tracy</span><br></pre></td></tr></table></figure>
+
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><p>只要条件满足，就不断循环，条件不满足时退出循环。比如我们要计算100以内所有奇数之和，可以用while循环实现。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">um = 0</span><br><span class="line">n = 99</span><br><span class="line"><span class="keyword">while</span> n &gt; 0:</span><br><span class="line">    sum = sum + n</span><br><span class="line">    n = n - 2</span><br><span class="line"><span class="built_in">print</span>(sum)</span><br></pre></td></tr></table></figure>
+
+<p>在循环内部变量n不断自减，直到变为-1时，不再满足while条件，循环退出。</p>
+<h3 id="break"><a href="#break" class="headerlink" title="break"></a>break</h3><p>break语句可以提前结束退出循环</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">n = 1</span><br><span class="line"><span class="keyword">while</span> n &lt;= 100:</span><br><span class="line">    <span class="keyword">if</span> n &gt; 10: <span class="comment"># 当n = 11时，条件满足，执行break语句</span></span><br><span class="line">        <span class="built_in">break</span> <span class="comment"># break语句会结束当前循环</span></span><br><span class="line">    <span class="built_in">print</span>(n)</span><br><span class="line">    n = n + 1</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'END'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h3><p>可以通过continue语句，跳过当前的这次循环，直接开始下一次循环。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">n = 0</span><br><span class="line"><span class="keyword">while</span> n &lt; 10:</span><br><span class="line">    n = n + 1</span><br><span class="line">    <span class="keyword">if</span> n % 2 == 0: <span class="comment"># 如果n是偶数，执行continue语句</span></span><br><span class="line">        <span class="built_in">continue</span> <span class="comment"># continue语句会直接继续下一轮循环，后续的print()语句不会执行</span></span><br><span class="line">    <span class="built_in">print</span>(n)</span><br></pre></td></tr></table></figure>
+
+<h2 id="dict和set"><a href="#dict和set" class="headerlink" title="dict和set"></a>dict和set</h2><h3 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h3><p>Python内置了字典：dict的支持，dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; d = &#123;<span class="string">'Michael'</span>: 95, <span class="string">'Bob'</span>: 75, <span class="string">'Tracy'</span>: 85&#125;</span><br><span class="line">&gt;&gt;&gt; d[<span class="string">'Michael'</span>]</span><br><span class="line">95</span><br></pre></td></tr></table></figure>
+
+<p>注意事项：<br>1.一个key对应一个value，所以，多次对一个key放入value，后面的值会把前面的值冲掉<br>2.key不存在，dict就会报错<br>避免方式：一是通过in判断key是否存在<br>         二是通过dict的get()方法，如果key不存在，可以返回None，或者自己指定的value<br>3.删除key，用pop(key)方法，对应的value也会从dict中删除</p>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。<br>要创建一个set，需要提供一个list作为输入集合：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s = <span class="built_in">set</span>([1, 2, 3])</span><br><span class="line">&gt;&gt;&gt; s</span><br><span class="line">&#123;1, 2, 3&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意，传入的参数[1, 2, 3]是一个list，而显示的{1, 2, 3}只是告诉你这个set内部有1，2，3这3个元素，显示的顺序也不表示set是有序的。。<br>重复元素在set中自动被过滤：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s = <span class="built_in">set</span>([1, 1, 2, 2, 3, 3])</span><br><span class="line">&gt;&gt;&gt; s</span><br><span class="line">&#123;1, 2, 3&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="set的增删方法"><a href="#set的增删方法" class="headerlink" title="set的增删方法"></a>set的增删方法</h5><p>add(key): 添加元素到set中，可重复添加，但是不会有效果<br>remove(key): 删除元素</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/Blog/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Blog/posts/1.html" rel="next" title="DOM选择器">
+                <i class="fa fa-chevron-left"></i> DOM选择器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Blog/posts/3.html" rel="prev" title="python 基本函数">
+                python 基本函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ningning</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/Blog/archives">
+                
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/Blog/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">Kategorien</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/Blog/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">schlagwörter</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型和变量"><span class="nav-number">1.</span> <span class="nav-text">数据类型和变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">1.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量"><span class="nav-number">1.2.</span> <span class="nav-text">变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符编码"><span class="nav-number">2.</span> <span class="nav-text">字符编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python的字符串"><span class="nav-number">2.1.</span> <span class="nav-text">Python的字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化"><span class="nav-number">2.2.</span> <span class="nav-text">格式化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list和tuple"><span class="nav-number">3.</span> <span class="nav-text">list和tuple</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#list"><span class="nav-number">3.1.</span> <span class="nav-text">list</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#list中的经常使用的方法"><span class="nav-number">3.1.0.1.</span> <span class="nav-text">list中的经常使用的方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tuple"><span class="nav-number">3.2.</span> <span class="nav-text">tuple</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#条件判断"><span class="nav-number">4.</span> <span class="nav-text">条件判断</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#if语句"><span class="nav-number">4.1.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if-else语句"><span class="nav-number">4.2.</span> <span class="nav-text">if else语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if-elif-else语句"><span class="nav-number">4.3.</span> <span class="nav-text">if elif else语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for…in循环"><span class="nav-number">4.4.</span> <span class="nav-text">for…in循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#while循环"><span class="nav-number">4.5.</span> <span class="nav-text">while循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#break"><span class="nav-number">4.6.</span> <span class="nav-text">break</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continue"><span class="nav-number">4.7.</span> <span class="nav-text">continue</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dict和set"><span class="nav-number">5.</span> <span class="nav-text">dict和set</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dict"><span class="nav-number">5.1.</span> <span class="nav-text">dict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">5.2.</span> <span class="nav-text">set</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#set的增删方法"><span class="nav-number">5.2.0.1.</span> <span class="nav-text">set的增删方法</span></a></li></ol></li></ol></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ningning</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/Blog/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/Blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/Blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/Blog/js/utils.js?v=7.1.2"></script>
+
+  <script src="/Blog/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/Blog/js/affix.js?v=7.1.2"></script>
+
+  <script src="/Blog/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/Blog/js/scrollspy.js?v=7.1.2"></script>
+<script src="/Blog/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/Blog/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
