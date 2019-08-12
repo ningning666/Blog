@@ -94,18 +94,18 @@
 
 
 
-  <meta name="description" content="线性表线性表：零个或多个数据元素的有限序列 定义若将线性表记为（a(1),…,a(i-1),a(i),a(i+1),…a(n)）,则表中a(i-1)领先于a(i),a(i)领先于a(i+1)，称a(i-1)是a(i)的直接前驱元素，a(i+1)是a(i)的直接后继元素，当i=1,2,…,n-1时，a(i)有且仅有一个直接后继元素，当i=2,3,…,n时，a(i)有且仅有一个直接前驱元素。线性表元素">
-<meta name="keywords" content="数据结构">
+  <meta name="description" content="数据封装、继承和多态只是面向对象程序设计中最基础的3个概念。在Python中，面向对象还有很多高级特性，允许我们写出非常强大的功能，我们会讨论多重继承、定制类、元类等概念。 使用slotsslots是用来限制class实例能添加的属性 12class Student(object):    __slots__ = (&apos;name&apos;, &apos;age&apos;) # 用tuple定义允许绑定的属性名称  测试结果L">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性表">
+<meta property="og:title" content="面向对象高级编程">
 <meta property="og:url" content="https://ningning666.github.io/Blog/posts/8.html">
 <meta property="og:site_name" content="宁宁的学习笔记">
-<meta property="og:description" content="线性表线性表：零个或多个数据元素的有限序列 定义若将线性表记为（a(1),…,a(i-1),a(i),a(i+1),…a(n)）,则表中a(i-1)领先于a(i),a(i)领先于a(i+1)，称a(i-1)是a(i)的直接前驱元素，a(i+1)是a(i)的直接后继元素，当i=1,2,…,n-1时，a(i)有且仅有一个直接后继元素，当i=2,3,…,n时，a(i)有且仅有一个直接前驱元素。线性表元素">
+<meta property="og:description" content="数据封装、继承和多态只是面向对象程序设计中最基础的3个概念。在Python中，面向对象还有很多高级特性，允许我们写出非常强大的功能，我们会讨论多重继承、定制类、元类等概念。 使用slotsslots是用来限制class实例能添加的属性 12class Student(object):    __slots__ = (&apos;name&apos;, &apos;age&apos;) # 用tuple定义允许绑定的属性名称  测试结果L">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-01T06:08:08.614Z">
+<meta property="og:updated_time" content="2019-08-12T08:43:48.925Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性表">
-<meta name="twitter:description" content="线性表线性表：零个或多个数据元素的有限序列 定义若将线性表记为（a(1),…,a(i-1),a(i),a(i+1),…a(n)）,则表中a(i-1)领先于a(i),a(i)领先于a(i+1)，称a(i-1)是a(i)的直接前驱元素，a(i+1)是a(i)的直接后继元素，当i=1,2,…,n-1时，a(i)有且仅有一个直接后继元素，当i=2,3,…,n时，a(i)有且仅有一个直接前驱元素。线性表元素">
+<meta name="twitter:title" content="面向对象高级编程">
+<meta name="twitter:description" content="数据封装、继承和多态只是面向对象程序设计中最基础的3个概念。在Python中，面向对象还有很多高级特性，允许我们写出非常强大的功能，我们会讨论多重继承、定制类、元类等概念。 使用slotsslots是用来限制class实例能添加的属性 12class Student(object):    __slots__ = (&apos;name&apos;, &apos;age&apos;) # 用tuple定义允许绑定的属性名称  测试结果L">
 
 
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>线性表 | 宁宁的学习笔记</title>
+  <title>面向对象高级编程 | 宁宁的学习笔记</title>
   
 
 
@@ -191,7 +191,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -276,11 +276,40 @@
 
       
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
     </ul>
   
 
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -339,7 +368,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">线性表
+          <h1 class="post-title" itemprop="name headline">面向对象高级编程
 
               
             
@@ -358,31 +387,19 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-07-28 13:53:49" itemprop="dateCreated datePublished" datetime="2019-07-28T13:53:49+08:00">2019-07-28</time>
+              <time title="创建时间：2019-08-12 16:53:24 / 修改时间：16:43:48" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-08-01 14:08:08" itemprop="dateModified" datetime="2019-08-01T14:08:08+08:00">2019-08-01</time>
               
             
           </span>
@@ -396,10 +413,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Python-知识汇总/" itemprop="url" rel="index"><span itemprop="name">Python 知识汇总</span></a></span>
 
                 
                 
@@ -434,39 +451,93 @@
       
 
       
-        <h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><p>线性表：零个或多个数据元素的有限序列</p>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>若将线性表记为（a(1),…,a(i-1),a(i),a(i+1),…a(n)）,则表中a(i-1)领先于a(i),a(i)领先于a(i+1)，称a(i-1)是a(i)的直接前驱元素，<br>a(i+1)是a(i)的直接后继元素，<br>当i=1,2,…,n-1时，a(i)有且仅有一个直接后继元素，当i=2,3,…,n时，a(i)有且仅有一个直接前驱元素。<br>线性表元素的个数n（n&gt;=0）定义线性表的长度，当n=0时，称为空表。</p>
-<h3 id="线性表的抽象数据类型"><a href="#线性表的抽象数据类型" class="headerlink" title="线性表的抽象数据类型"></a>线性表的抽象数据类型</h3><p>定义如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ADT 线性表（List）</span><br><span class="line">Data</span><br><span class="line">    线性表的数据对象集合为&#123;a1,a2,...,an&#125;，每个元素的类型均为DataType。其中，除第一个元素a1外，</span><br><span class="line">    每一个元素有且只有一个直接前驱元素，除了最后一个元素an外，每一个元素有且只有一个直接后继元素。</span><br><span class="line">    数据元素之间的关系是一对一的关系。</span><br><span class="line">Operation</span><br><span class="line">    InitList(*L)： 初始化操作，建立一个空的线性表L。</span><br><span class="line">    ListEmpty(L)： 若线性表为空，返回<span class="literal">true</span>，否则返回<span class="literal">false</span>。</span><br><span class="line">    ClearList(*L)：将线性表清空。</span><br><span class="line">    GetElem(L,i,*e)：将线性表L中的第i个位置元素值返回给e。</span><br><span class="line">    LocateElem(L,e): 在线性表L中查找与给定值e相等的元素，如果查找成功，返回该元素在表中序号表示成功；否则，返回0表示失败。</span><br><span class="line">    ListInsert(*L,i,e)：在线性表L中的第i个位置插入新元素e。</span><br><span class="line">    ListDelete(*L,i,*e): 删除线性表L中第i个位置元素，并用e返回其值。</span><br><span class="line">    ListLength(L)：返回线性表L的元素个数。</span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
+        <p>数据封装、继承和多态只是面向对象程序设计中最基础的3个概念。在Python中，面向对象还有很多高级特性，允许我们写出非常强大的功能，我们会讨论多重继承、定制类、元类等概念。</p>
+<h2 id="使用slots"><a href="#使用slots" class="headerlink" title="使用slots"></a>使用<strong>slots</strong></h2><p><strong>slots</strong>是用来限制class实例能添加的属性</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    __slots__ = (<span class="string">'name'</span>, <span class="string">'age'</span>) <span class="comment"># 用tuple定义允许绑定的属性名称</span></span><br></pre></td></tr></table></figure>
 
-<p>对于不同的应用，线性表的基本操作是不同的，上述操作是最基本的，对于实际问题中涉及的关于线性表的更复杂操作，完全可以用这些基本操作的组合来实现。<br>示例：比如，要实现两个线性表集合A和B的并集操作。即要使得集合A=A∪B，说白了，就是把存在集合B中的但不存在A中的数据元素插入到A中即可。<br>假设La表示集合A，Lb表示集合B，则实现的代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/*将所有的在线性表Lb中但不在La中的数据元素插入到La中*/</span><br><span class="line">void union(List *La,List Lb)&#123;</span><br><span class="line">    int La_len,Lb_len,i;</span><br><span class="line">    ElemType e;             /*声明与La和Lb相同的数据元素e */</span><br><span class="line">    La_len = ListLength(La); /*求线性表的长度*/</span><br><span class="line">    Lb_len = ListLength(Lb)</span><br><span class="line">    <span class="keyword">for</span> (i=1; i&lt;=Lb_len; i++) &#123;</span><br><span class="line">        GetElem(Lb,i,e);    /*取Lb中第i个数据元素赋给e*/</span><br><span class="line">        <span class="keyword">if</span>(!LocateElem(La,e,equal))  /*La中不存在和e相同数据元素*/</span><br><span class="line">        &#123;</span><br><span class="line">            ListInsert(La,++La_len,e);  /*插入*/</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试结果L:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s = Student() <span class="comment"># 创建新的实例</span></span><br><span class="line">&gt;&gt;&gt; s.name = <span class="string">'Michael'</span> <span class="comment"># 绑定属性'name'</span></span><br><span class="line">&gt;&gt;&gt; s.age = 25 <span class="comment"># 绑定属性'age'</span></span><br><span class="line">&gt;&gt;&gt; s.score = 99 <span class="comment"># 绑定属性'score'</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">AttributeError: <span class="string">'Student'</span> object has no attribute <span class="string">'score'</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h3><p>线性表的顺序存储结构：指的是用一段地址连续的存储单元依次存储线性表的数据元素。<br>线性表的顺序存储的结构代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">define MAXSIZE 20   /*存储空间初始分配量*/</span><br><span class="line">typedef int ElemType  /*ElemType 类型根据实际情况而定，这里假设为int*/</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">    ElemType data[MAXSIZE];   /*数组存储数据元素，最大值为MAXSIZE*/</span><br><span class="line">    int length;               /*线性表当前长度*/</span><br><span class="line">&#125;Sqlist；</span><br></pre></td></tr></table></figure>
+<p><strong>由于’score’没有被放到<strong>slots</strong>中，所以不能绑定score属性，试图绑定score将得到AttributeError的错误。使用<strong>slots</strong>要注意，<strong>slots</strong>定义的属性仅对当前类实例起作用，对继承的子类是不起作用的：</strong></p>
+<h2 id="使用-property"><a href="#使用-property" class="headerlink" title="使用@property"></a>使用@property</h2><p>在绑定属性时，如果我们直接向下面这样把属性暴露出去，虽然写起来简单，但是，没办法检查参数，导致成绩可以随便改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = Student()</span><br><span class="line">s.score = 9999</span><br></pre></td></tr></table></figure>
 
-<p>顺序存储结构需要三个属性：</p>
+<p>这显然不合逻辑。为了限制score的范围，可以通过一个set_score()方法来设置成绩，再通过一个get_score()来获取成绩，这样，在set_score()方法里，就可以检查参数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line"></span><br><span class="line">    def get_score(self):</span><br><span class="line">         <span class="built_in">return</span> self._score</span><br><span class="line"></span><br><span class="line">    def set_score(self, value):</span><br><span class="line">        <span class="keyword">if</span> not isinstance(value, int):</span><br><span class="line">            raise ValueError(<span class="string">'score must be an integer!'</span>)</span><br><span class="line">        <span class="keyword">if</span> value &lt; 0 or value &gt; 100:</span><br><span class="line">            raise ValueError(<span class="string">'score must between 0 ~ 100!'</span>)</span><br><span class="line">        self._score = value</span><br></pre></td></tr></table></figure>
+
+<p>现在，对任意的Student实例进行操作，就不能随心所欲地设置score了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s = Student()</span><br><span class="line">&gt;&gt;&gt; s.set_score(60) <span class="comment"># ok!</span></span><br><span class="line">&gt;&gt;&gt; s.get_score()</span><br><span class="line">60</span><br><span class="line">&gt;&gt;&gt; s.set_score(9999)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  ...</span><br><span class="line">ValueError: score must between 0 ~ 100!</span><br></pre></td></tr></table></figure>
+
+<p>但是，上面的调用方法又略显复杂，没有直接用属性这么直接简单。<br>有没有既能检查参数，又可以用类似属性这样简单的方式来访问类的变量呢？对于追求完美的Python程序员来说，这是必须要做到的！<br>还记得装饰器（decorator）可以给函数动态加上功能吗？对于类的方法，装饰器一样起作用。Python内置的@property装饰器就是负责把一个方法变成属性调用的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def score(self):</span><br><span class="line">        <span class="built_in">return</span> self._score</span><br><span class="line"></span><br><span class="line">    @score.setter</span><br><span class="line">    def score(self, value):</span><br><span class="line">        <span class="keyword">if</span> not isinstance(value, int):</span><br><span class="line">            raise ValueError(<span class="string">'score must be an integer!'</span>)</span><br><span class="line">        <span class="keyword">if</span> value &lt; 0 or value &gt; 100:</span><br><span class="line">            raise ValueError(<span class="string">'score must between 0 ~ 100!'</span>)</span><br><span class="line">        self._score = value</span><br></pre></td></tr></table></figure>
+
+<p>@property的实现比较复杂，我们先考察如何使用。把一个getter方法变成属性，只需要加上@property就可以了，此时，@property本身又创建了另一个装饰器@score.setter，负责把一个setter方法变成属性赋值，于是，我们就拥有一个可控的属性操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s = Student()</span><br><span class="line">&gt;&gt;&gt; s.score = 60 <span class="comment"># OK，实际转化为s.set_score(60)</span></span><br><span class="line">&gt;&gt;&gt; s.score <span class="comment"># OK，实际转化为s.get_score()</span></span><br><span class="line">60</span><br><span class="line">&gt;&gt;&gt; s.score = 9999</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  ...</span><br><span class="line">ValueError: score must between 0 ~ 100!</span><br></pre></td></tr></table></figure>
+
+<p>注意到这个神奇的@property，我们在对实例属性操作的时候，就知道该属性很可能不是直接暴露的，而是通过getter和setter方法来实现的。<br>还可以定义只读属性，只定义getter方法，不定义setter方法就是一个只读属性：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def birth(self):</span><br><span class="line">        <span class="built_in">return</span> self._birth</span><br><span class="line"></span><br><span class="line">    @birth.setter</span><br><span class="line">    def birth(self, value):</span><br><span class="line">        self._birth = value</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def age(self):</span><br><span class="line">        <span class="built_in">return</span> 2015 - self._birth</span><br></pre></td></tr></table></figure>
+
+<p>上面的birth是可读写属性，而age就是一个只读属性，因为age可以根据birth和当前时间计算出来。<br><strong>@property广泛应用在类的定义中，可以让调用者写出简短的代码，同时保证对参数进行必要的检查，这样，程序运行时就减少了出错的可能性。</strong></p>
+<h2 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h2><p>继承是面向对象编程的一个重要的方式，因为通过继承，子类就可以扩展父类的功能，例如Animal类层的设计，假设我们要实现以下4种动物：</p>
 <ul>
-<li>存储空间的起始位置：数组data，它的存储位置就是存储空间的存储位置。</li>
-<li>线性表的最大存储容量：数组长度MaxSize。</li>
-<li>线性表的当前长度：length。</li>
+<li>Dog - 狗狗；</li>
+<li>Bat - 蝙蝠；</li>
+<li>Parrot - 鹦鹉；</li>
+<li>Ostrich - 鸵鸟。<br>如果按照哺乳动物与鸟类归类，可以将Dog与Bat归为一类，Parrot与Ostrich归为一类，但是如果我们再按照能跑与能飞来分类，将非常麻烦，所以python设计多重继承</li>
 </ul>
-<p>注意：线性表的长度与数组的长度是不一样的，线性表的长度是线性表中数据元素的个数，随着线性表插入和删除操作的进行，<br>这个量是变化的；数组的长度指的是线性表存放线性表的存储空间的长度，在任意时刻，线性表的长度小于等于数组的长度。</p>
-<h3 id="顺序存储结构的插入与删除"><a href="#顺序存储结构的插入与删除" class="headerlink" title="顺序存储结构的插入与删除"></a>顺序存储结构的插入与删除</h3><h5 id="获得元素操作"><a href="#获得元素操作" class="headerlink" title="获得元素操作"></a>获得元素操作</h5><p>对于顺序存储结构来说，如果我们要实现GetElem操作，只要i的数值在数组下标范围内，就是把数组第i-1下标的值返回即可。<br>示例代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#define OK 1</span></span><br><span class="line"><span class="comment">#define ERROR 0</span></span><br><span class="line"><span class="comment">#define TRUE 1</span></span><br><span class="line"><span class="comment">#define FALSE 0</span></span><br><span class="line">typedef int Status;</span><br><span class="line">/*Status 是函数的类型，其值是函数结果状态代码，如OK等*/</span><br><span class="line">/*初始条件：顺序线性表 L 已存在，1&lt;=i&lt;=ListLength(L)*/</span><br><span class="line">/*操作结果：用e返回L中第i个数据元素的值*/</span><br><span class="line">Status GetElem (SqList L,int i,ElemType *e)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(L.length==0 || i&lt;1 || i&gt;L.Length)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    *e=L.data[i-1];</span><br><span class="line">    <span class="built_in">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们要给动物加上Runable与Flyable的功能，只需要定义好Runnable与Flyable的类</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Runnable(object):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Running...'</span>)</span><br><span class="line"></span><br><span class="line">class Flyable(object):</span><br><span class="line">    def fly(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Flying...'</span>)</span><br></pre></td></tr></table></figure>
 
-<h5 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h5><p>插入算法的思路：</p>
-<ul>
-<li>如果插入位置不合理，抛出异常；</li>
-<li>如果线性表长度大于等于数组长度，则抛出异常或动态增加容量</li>
-<li>从最后一个元素开始向前遍历到第i个位置，分别将它们都向后移动一位</li>
-<li>将要插入元素填入位置i处</li>
-<li>表长加1<br>实现代码如下：<br>/* 初始条件：顺序线性表L已存在，1&lt;=i&lt;=ListLength(L)<em>/
-/</em> 操作结果：在L中第i个位置之前插入新的数据元素e，L的长度加1<em>/
-Status ListInsert (SqList *L,int i,ElemType e)<br>{
-  int k;<br>  if (ListLength(L)==MAXSIZE)  /</em> 顺序线性表已经满 */<br>  {<pre><code>return ERROR;</code></pre>  }<br>  if (i&lt;1 || i&gt;ListLength+1) /* 当i不在范围内时*/<br>  {<pre><code>return ERROR;</code></pre>  }<br>  if (i&lt;=ListLength)  /* 若插入数据位置不在表尾 */<br>}</li>
-</ul>
-<p>} </p>
+<p>对于需要Runnable功能的动物，就多继承一个Runnable，例如Dog：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Dog(Mammal, Runnable):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>对于需要Flyable功能的动物，就多继承一个Flyable，例如Bat：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Bat(Mammal, Flyable):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>通过多重继承，一个子类就可以同时获得多个父类的所有功能。</p>
+<h3 id="MixIn"><a href="#MixIn" class="headerlink" title="MixIn"></a>MixIn</h3><p>在设计类的继承关系时，通常，主线都是单一继承下来的，例如，Ostrich继承自Bird。但是，如果需要“混入”额外的功能，通过多重继承就可以实现，比如，让Ostrich除了继承自Bird外，再同时继承Runnable。这种设计通常称之为MixIn。<br>为了更好地看出继承关系，我们把Runnable和Flyable改为RunnableMixIn和FlyableMixIn。类似的，你还可以定义出肉食动物CarnivorousMixIn和植食动物HerbivoresMixIn，让某个动物同时拥有好几个MixIn：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Dog(Mammal, RunnableMixIn, CarnivorousMixIn):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>MixIn的目的就是给一个类增加多个功能，这样，在设计类的时候，我们优先考虑通过多重继承来组合多个MixIn的功能，而不是设计多层次的复杂的继承关系。</p>
+<p>Python自带的很多库也使用了MixIn。举个例子，Python自带了TCPServer和UDPServer这两类网络服务，而要同时服务多个用户就必须使用多进程或多线程模型，这两种模型由ForkingMixIn和ThreadingMixIn提供。通过组合，我们就可以创造出合适的服务来。<br>比如，编写一个多进程模式的TCP服务，定义如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class MyTCPServer(TCPServer, ForkingMixIn):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>编写一个多线程模式的UDP服务，定义如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class MyUDPServer(UDPServer, ThreadingMixIn):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>如果你打算搞一个更先进的协程模型，可以编写一个CoroutineMixIn：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class MyTCPServer(TCPServer, CoroutineMixIn):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>这样一来，我们不需要复杂而庞大的继承链，只要选择组合不同的类的功能，就可以快速构造出所需的子类。<br><strong>由于Python允许使用多重继承，因此，MixIn就是一种常见的设计。只允许单一继承的语言（如Java）不能使用MixIn的设计。</strong></p>
+<h2 id="定制类"><a href="#定制类" class="headerlink" title="定制类"></a>定制类</h2><p><strong>str</strong><br>我们先定义一个Student类，打印一个实例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; class Student(object):</span><br><span class="line">...     def __init__(self, name):</span><br><span class="line">...         self.name = name</span><br><span class="line">...</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(Student(<span class="string">'Michael'</span>))</span><br><span class="line">&lt;__main__.Student object at 0x109afb190&gt;</span><br></pre></td></tr></table></figure>
+
+<p>打印出一堆&lt;<strong>main</strong>.Student object at 0x109afb190&gt;，不好看。<br>怎么才能打印得好看呢？只需要定义好<strong>str</strong>()方法，返回一个好看的字符串就可以了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; class Student(object):</span><br><span class="line">...     def __init__(self, name):</span><br><span class="line">...         self.name = name</span><br><span class="line">...     def __str__(self):</span><br><span class="line">...         <span class="built_in">return</span> <span class="string">'Student object (name: %s)'</span> % self.name</span><br><span class="line">...</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(Student(<span class="string">'Michael'</span>))</span><br><span class="line">Student object (name: Michael)</span><br></pre></td></tr></table></figure>
+
+<p>这样打印出来的实例，不但好看，而且容易看出实例内部重要的数据。<br>但是细心的朋友会发现直接敲变量不用print，打印出来的实例还是不好看：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s = Student(<span class="string">'Michael'</span>)</span><br><span class="line">&gt;&gt;&gt; s</span><br><span class="line">&lt;__main__.Student object at 0x109afb310&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这是因为直接显示变量调用的不是<strong>str</strong>()，而是<strong>repr</strong>()，两者的区别是<strong>str</strong>()返回用户看到的字符串，而<strong>repr</strong>()返回程序开发者看到的字符串，也就是说，<strong>repr</strong>()是为调试服务的。</p>
+<p>解决办法是再定义一个<strong>repr</strong>()。但是通常<strong>str</strong>()和<strong>repr</strong>()代码都是一样的，所以，有个偷懒的写法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self, name):</span><br><span class="line">        self.name = name</span><br><span class="line">    def __str__(self):</span><br><span class="line">        <span class="built_in">return</span> <span class="string">'Student object (name=%s)'</span> % self.name</span><br><span class="line">    __repr__ = __str__</span><br></pre></td></tr></table></figure>
+
+<h3 id="iter"><a href="#iter" class="headerlink" title="iter"></a><strong>iter</strong></h3><p>如果一个类想被用于for … in循环，类似list或tuple那样，就必须实现一个<strong>iter</strong>()方法，该方法返回一个迭代对象，然后，Python的for循环就会不断调用该迭代对象的<strong>next</strong>()方法拿到循环的下一个值，直到遇到StopIteration错误时退出循环。</p>
+<p>我们以斐波那契数列为例，写一个Fib类，可以作用于for循环：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Fib(object):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.a, self.b = 0, 1 <span class="comment"># 初始化两个计数器a，b</span></span><br><span class="line"></span><br><span class="line">    def __iter__(self):</span><br><span class="line">        <span class="built_in">return</span> self <span class="comment"># 实例本身就是迭代对象，故返回自己</span></span><br><span class="line"></span><br><span class="line">    def __next__(self):</span><br><span class="line">        self.a, self.b = self.b, self.a + self.b <span class="comment"># 计算下一个值</span></span><br><span class="line">        <span class="keyword">if</span> self.a &gt; 100000: <span class="comment"># 退出循环的条件</span></span><br><span class="line">            raise StopIteration()</span><br><span class="line">        <span class="built_in">return</span> self.a <span class="comment"># 返回下一个值</span></span><br></pre></td></tr></table></figure>
+
+<p>现在，试试把Fib实例作用于for循环：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="keyword">for</span> n <span class="keyword">in</span> Fib():</span><br><span class="line">...     <span class="built_in">print</span>(n)</span><br><span class="line">...</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">5</span><br><span class="line">...</span><br><span class="line">46368</span><br><span class="line">75025</span><br></pre></td></tr></table></figure>
+
+<h3 id="getitem"><a href="#getitem" class="headerlink" title="getitem"></a><strong>getitem</strong></h3><p>Fib实例虽然能作用于for循环，看起来和list有点像，但是，把它当成list来使用还是不行，比如，取第5个元素：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Fib()[5]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: <span class="string">'Fib'</span> object does not support indexing</span><br></pre></td></tr></table></figure>
+
+<p>要表现得像list那样按照下标取出元素，需要实现<strong>getitem</strong>()方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Fib(object):</span><br><span class="line">    def __getitem__(self, n):</span><br><span class="line">        a, b = 1, 1</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(n):</span><br><span class="line">            a, b = b, a + b</span><br><span class="line">        <span class="built_in">return</span> a</span><br></pre></td></tr></table></figure>
+
+<p>现在，就可以按下标访问数列的任意一项了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; f = Fib()</span><br><span class="line">&gt;&gt;&gt; f[0]</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; f[1]</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; f[2]</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; f[3]</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; f[10]</span><br><span class="line">89</span><br><span class="line">&gt;&gt;&gt; f[100]</span><br><span class="line">573147844013817084101</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -493,7 +564,7 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
         
         <div class="post-tags">
           
-            <a href="/Blog/tags/数据结构/" rel="tag"># 数据结构</a>
+            <a href="/Blog/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -506,8 +577,8 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Blog/posts/7.html" rel="next" title="算法">
-                <i class="fa fa-chevron-left"></i> 算法
+              <a href="/Blog/posts/7.html" rel="next" title="面向对象编程">
+                <i class="fa fa-chevron-left"></i> 面向对象编程
               </a>
             
           </div>
@@ -516,8 +587,8 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Blog/posts/9.html" rel="prev" title="python面向对象">
-                python面向对象 <i class="fa fa-chevron-right"></i>
+              <a href="/Blog/posts/9.html" rel="prev" title="数据结构绪论">
+                数据结构绪论 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -564,10 +635,10 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -587,8 +658,8 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
                 
                   <a href="/Blog/archives">
                 
-                    <span class="site-state-item-count">13</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
@@ -611,7 +682,7 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
                       
                     
                     <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">Kategorien</span>
+                    <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
               
@@ -633,10 +704,8 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">schlagwörter</span>
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
               
@@ -673,7 +742,7 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表"><span class="nav-number">1.</span> <span class="nav-text">线性表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表的抽象数据类型"><span class="nav-number">1.2.</span> <span class="nav-text">线性表的抽象数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表的顺序存储结构"><span class="nav-number">1.3.</span> <span class="nav-text">线性表的顺序存储结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序存储结构的插入与删除"><span class="nav-number">1.4.</span> <span class="nav-text">顺序存储结构的插入与删除</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#获得元素操作"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">获得元素操作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#插入操作"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">插入操作</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用slots"><span class="nav-number">1.</span> <span class="nav-text">使用slots</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-property"><span class="nav-number">2.</span> <span class="nav-text">使用@property</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多重继承"><span class="nav-number">3.</span> <span class="nav-text">多重继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MixIn"><span class="nav-number">3.1.</span> <span class="nav-text">MixIn</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定制类"><span class="nav-number">4.</span> <span class="nav-text">定制类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iter"><span class="nav-number">4.1.</span> <span class="nav-text">iter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getitem"><span class="nav-number">4.2.</span> <span class="nav-text">getitem</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -706,7 +775,7 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 
@@ -714,7 +783,7 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div>
 
 
 
@@ -834,6 +903,326 @@ Status ListInsert (SqList *L,int i,ElemType e)<br>{
 
 
   
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/Blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
