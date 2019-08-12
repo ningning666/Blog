@@ -392,7 +392,7 @@
                 
               
 
-              <time title="创建时间：2019-08-12 16:53:24 / 修改时间：16:50:34" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 16:53:24 / 修改时间：18:02:05" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
             
 
             
@@ -454,7 +454,8 @@
             <h2 id="入门语法介绍"><a href="#入门语法介绍" class="headerlink" title="入门语法介绍"></a>入门语法介绍</h2><h3 id="box-sizing属性"><a href="#box-sizing属性" class="headerlink" title="box-sizing属性"></a>box-sizing属性</h3><p>box-sizing,可以设定元素的大小该如何计算，包括两个属性：content-box 与 border-box</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    boc-sizing: content-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>上面的代码box-sizing的默认值是content-box,对元素设置所设定的宽度会应用到该元素的内容上，而填充和边框会照常加上去<br>如果把值设置为border-box，则意味着设定的width值是内容、填充和边框的总宽度<br><img src="/Blog/Blog/posts/0/1.png" alt="12"><br>示例如下：</p>
+<p>上面的代码box-sizing的默认值是content-box,对元素设置所设定的宽度会应用到该元素的内容上，而填充和边框会照常加上去<br>如果把值设置为border-box，则意味着设定的width值是内容、填充和边框的总宽度</p>
+<p>示例如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    border: 10px solid black;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">    padding: 10px;</span><br><span class="line">    width: 150px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>现在150px的宽度包括了填充和边框，二者在内容两侧都占据了10px，所以div元素的内容计算宽度就是110px，即150px减去20px的填充和20px的边框<br>对于Firefox来说，关于它的-moz-box-sizing属性，有额外的padding-box属性，使用这个值，计算元素属性时会对它的填充和内容进行计算，不包括边框</p>
