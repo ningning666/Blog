@@ -347,7 +347,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/6.html">
+    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ningning">
@@ -367,7 +367,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Blog/posts/6.html" class="post-title-link" itemprop="url">函数式编程</a>
+                <a href="/Blog/posts/3.html" class="post-title-link" itemprop="url">函数式编程</a>
               
             
           </h1>
@@ -392,12 +392,24 @@
                 
               
 
-              <time title="创建时间：2019-08-12 16:53:24 / 修改时间：16:32:44" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 16:53:24" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-30 16:05:16" itemprop="dateModified" datetime="2019-08-30T16:05:16+08:00">2019-08-30</time>
               
             
           </span>
@@ -472,7 +484,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line">&gt;&gt;&gt; def normalize(name):</span><br><span class="line">&gt;&gt;&gt;    <span class="built_in">return</span> name.capitalize()</span><br><span class="line">&gt;&gt;&gt;<span class="comment"># 测试:</span></span><br><span class="line">&gt;&gt;&gt; L1 = [<span class="string">'adam'</span>, <span class="string">'LISA'</span>, <span class="string">'barT'</span>]</span><br><span class="line">&gt;&gt;&gt; L2 = list(map(normalize, L1))</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(L2)</span><br><span class="line">[<span class="string">'Adam'</span>, <span class="string">'Lisa'</span>, <span class="string">'Bart'</span>]</span><br></pre></td></tr></table></figure>
 
 <p>练习2: Python提供的sum()函数可以接受一个list并求和，请编写一个prod()函数，可以接受一个list并利用reduce()求积：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line">&gt;&gt;&gt; from functools import reduce</span><br><span class="line">&gt;&gt;&gt; def prod(L):</span><br><span class="line">&gt;&gt;&gt;   <span class="built_in">return</span> reduce(lambda x, y: x * y, L)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">'3 * 5 * 7 * 9 ='</span>, prod([3, 5, 7, 9]))</span><br><span class="line">&gt;&gt;&gt; <span class="keyword">if</span> prod([3, 5, 7, 9]) == 945:</span><br><span class="line">&gt;&gt;&gt;   <span class="built_in">print</span>(<span class="string">'测试成功!'</span>)</span><br><span class="line">&gt;&gt;&gt; <span class="keyword">else</span>:</span><br><span class="line">&gt;&gt;&gt;    <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br><span class="line">3 * 5 * 7 * 9 = 945 </span><br><span class="line">测试成功!</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line">&gt;&gt;&gt; from functools import reduce</span><br><span class="line">&gt;&gt;&gt; def prod(L):</span><br><span class="line">&gt;&gt;&gt;   <span class="built_in">return</span> reduce(lambda x, y: x * y, L)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">'3 * 5 * 7 * 9 ='</span>, prod([3, 5, 7, 9]))</span><br><span class="line">&gt;&gt;&gt; <span class="keyword">if</span> prod([3, 5, 7, 9]) == 945:</span><br><span class="line">&gt;&gt;&gt;   <span class="built_in">print</span>(<span class="string">'测试成功!'</span>)</span><br><span class="line">&gt;&gt;&gt; <span class="keyword">else</span>:</span><br><span class="line">&gt;&gt;&gt;    <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br><span class="line">3 * 5 * 7 * 9 = 945</span><br><span class="line">测试成功!</span><br></pre></td></tr></table></figure>
 
 <h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>Python内建的filter()函数用于过滤序列,用filter()这个高阶函数，关键在于正确实现一个“筛选”函数。<br>filter()函数返回的是一个Iterator，也就是一个惰性序列，所以要强迫filter()完成计算结果，需要用list()函数获得所有结果并返回list.<br>示例如下：<br>用filter求素数<br>计算素数的一个方法是埃氏筛法，它的算法理解起来非常简单：<br>首先，列出从2开始的所有自然数，构造一个序列：<br>2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, …<br>取序列的第一个数2，它一定是素数，然后用2把序列的2的倍数筛掉：<br>3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, …<br>取新序列的第一个数3，它一定是素数，然后用3把序列的3的倍数筛掉：<br>5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, …<br>取新序列的第一个数5，然后用5把序列的5的倍数筛掉：<br>7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, …<br>不断筛下去，就可以得到所有的素数。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用Python来实现这个算法，可以先构造一个从3开始的奇数序列：</span></span><br><span class="line">def _odd_iter():</span><br><span class="line">    n = 1</span><br><span class="line">    <span class="keyword">while</span> True:</span><br><span class="line">        n = n + 2</span><br><span class="line">        yield n</span><br><span class="line"><span class="comment"># 然后定义一个筛选函数：</span></span><br><span class="line">def _not_divisible(n):</span><br><span class="line">    <span class="built_in">return</span> lambda x: x % n &gt; 0</span><br><span class="line"><span class="comment"># 最后，定义一个生成器，不断返回下一个素数：</span></span><br><span class="line">def primes():</span><br><span class="line">    yield 2</span><br><span class="line">    it = _odd_iter() <span class="comment"># 初始序列</span></span><br><span class="line">    <span class="keyword">while</span> True:</span><br><span class="line">        n = next(it) <span class="comment"># 返回序列的第一个数</span></span><br><span class="line">        yield n</span><br><span class="line">        it = filter(_not_divisible(n), it) <span class="comment"># 构造新序列</span></span><br><span class="line"><span class="comment">#由于primes()也是一个无限序列，所以调用时需要设置一个退出循环的条件：</span></span><br><span class="line"><span class="comment"># 打印1000以内的素数:</span></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> primes():</span><br><span class="line">    <span class="keyword">if</span> n &lt; 1000:</span><br><span class="line">        <span class="built_in">print</span>(n)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">break</span></span><br></pre></td></tr></table></figure>
@@ -493,7 +505,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[(<span class="string">'Bart'</span>, 66), (<span class="string">'Bob'</span>, 75), (<span class="string">'Lisa'</span>, 88), (<span class="string">'Adam'</span>, 92)]</span><br></pre></td></tr></table></figure>
 
 <h2 id="返回函数"><a href="#返回函数" class="headerlink" title="返回函数"></a>返回函数</h2><h3 id="函数作为返回值"><a href="#函数作为返回值" class="headerlink" title="函数作为返回值"></a>函数作为返回值</h3><p>高阶函数除了可以接受函数作为参数外，还可以把函数作为结果值返回<br>示例如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; def lazy_sum(*args):</span><br><span class="line">&gt;&gt;&gt;     def sum():</span><br><span class="line">&gt;&gt;&gt;        ax = 0</span><br><span class="line">&gt;&gt;&gt;        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">&gt;&gt;&gt;            ax = ax + n</span><br><span class="line">&gt;&gt;&gt;        <span class="built_in">return</span> ax</span><br><span class="line">&gt;&gt;&gt;    <span class="built_in">return</span> sum</span><br><span class="line">&gt;&gt;&gt; f = lazy_sum(1, 3, 5, 7, 9)  <span class="comment">#当我们调用lazy_sum()时，返回的并不是求和结果，而是求和函数</span></span><br><span class="line">&gt;&gt;&gt; f</span><br><span class="line">&lt;<span class="keyword">function</span> lazy_sum.&lt;locals&gt;.sum at 0x101c6ed90&gt;</span><br><span class="line">&gt;&gt;&gt; f()                 <span class="comment">#调用函数f时，才真正计算求和的结果</span></span><br><span class="line">25 </span><br><span class="line">&gt;&gt;&gt; f1 = lazy_sum(1, 3, 5, 7, 9)</span><br><span class="line">&gt;&gt;&gt; f2 = lazy_sum(1, 3, 5, 7, 9)</span><br><span class="line">&gt;&gt;&gt; f1==f2              <span class="comment">#f1()和f2()的调用结果互不影响。</span></span><br><span class="line">False</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; def lazy_sum(*args):</span><br><span class="line">&gt;&gt;&gt;     def sum():</span><br><span class="line">&gt;&gt;&gt;        ax = 0</span><br><span class="line">&gt;&gt;&gt;        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">&gt;&gt;&gt;            ax = ax + n</span><br><span class="line">&gt;&gt;&gt;        <span class="built_in">return</span> ax</span><br><span class="line">&gt;&gt;&gt;    <span class="built_in">return</span> sum</span><br><span class="line">&gt;&gt;&gt; f = lazy_sum(1, 3, 5, 7, 9)  <span class="comment">#当我们调用lazy_sum()时，返回的并不是求和结果，而是求和函数</span></span><br><span class="line">&gt;&gt;&gt; f</span><br><span class="line">&lt;<span class="keyword">function</span> lazy_sum.&lt;locals&gt;.sum at 0x101c6ed90&gt;</span><br><span class="line">&gt;&gt;&gt; f()                 <span class="comment">#调用函数f时，才真正计算求和的结果</span></span><br><span class="line">25</span><br><span class="line">&gt;&gt;&gt; f1 = lazy_sum(1, 3, 5, 7, 9)</span><br><span class="line">&gt;&gt;&gt; f2 = lazy_sum(1, 3, 5, 7, 9)</span><br><span class="line">&gt;&gt;&gt; f1==f2              <span class="comment">#f1()和f2()的调用结果互不影响。</span></span><br><span class="line">False</span><br></pre></td></tr></table></figure>
 
 <h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>注意到返回的函数在其定义内部引用了局部变量args，所以，当一个函数返回了一个函数后，其内部的局部变量还被新函数引用，所以，闭包用起来简单，实现起来可不容易。<br>另一个需要注意的问题是，返回的函数并没有立刻执行，而是直到调用了f()才执行。我们来看一个例子：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def count():</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1, 4):</span><br><span class="line">        def f():</span><br><span class="line">             <span class="built_in">return</span> i*i</span><br><span class="line">        fs.append(f)</span><br><span class="line">    <span class="built_in">return</span> fs</span><br><span class="line"></span><br><span class="line">f1, f2, f3 = count()</span><br></pre></td></tr></table></figure>
@@ -502,7 +514,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; f1()</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; f2()</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; f3()</span><br><span class="line">9</span><br></pre></td></tr></table></figure>
 
 <p>全部都是9！原因就在于返回的函数引用了变量i，但它并非立刻执行。等到3个函数都返回时，它们所引用的变量i已经变成了3，因此最终结果为9。<br><strong>返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。</strong><br>练习5：利用闭包返回一个计数器函数，每次调用它返回递增整数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line">def createCounter():</span><br><span class="line">    s = [0] </span><br><span class="line">    def counter():</span><br><span class="line">        s[0] = s[0]+1</span><br><span class="line">        <span class="built_in">return</span> s[0]</span><br><span class="line">    <span class="built_in">return</span> counter</span><br><span class="line"><span class="comment"># 测试:</span></span><br><span class="line">counterA = createCounter()</span><br><span class="line"><span class="built_in">print</span>(counterA(), counterA(), counterA(), counterA(), counterA()) <span class="comment"># 1 2 3 4 5</span></span><br><span class="line">counterB = createCounter()</span><br><span class="line"><span class="keyword">if</span> [counterB(), counterB(), counterB(), counterB()] == [1, 2, 3, 4]:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试通过!'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br><span class="line">1 2 3 4 5 </span><br><span class="line">测试通过!</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line">def createCounter():</span><br><span class="line">    s = [0]</span><br><span class="line">    def counter():</span><br><span class="line">        s[0] = s[0]+1</span><br><span class="line">        <span class="built_in">return</span> s[0]</span><br><span class="line">    <span class="built_in">return</span> counter</span><br><span class="line"><span class="comment"># 测试:</span></span><br><span class="line">counterA = createCounter()</span><br><span class="line"><span class="built_in">print</span>(counterA(), counterA(), counterA(), counterA(), counterA()) <span class="comment"># 1 2 3 4 5</span></span><br><span class="line">counterB = createCounter()</span><br><span class="line"><span class="keyword">if</span> [counterB(), counterB(), counterB(), counterB()] == [1, 2, 3, 4]:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试通过!'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br><span class="line">1 2 3 4 5</span><br><span class="line">测试通过!</span><br></pre></td></tr></table></figure>
 
 <h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>关键字lambda表示匿名函数，冒号前面的x表示函数参数。<br>匿名函数有个限制，就是只能有一个表达式，不用写return，返回值就是该表达式的结果。<br>用匿名函数有个好处，因为函数没有名字，不必担心函数名冲突。此外，匿名函数也是一个函数对象，也可以把匿名函数赋值给一个变量，再利用变量来调用该函数<br>示例如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; f = lambda x: x * x</span><br><span class="line">&gt;&gt;&gt; f</span><br><span class="line">&lt;<span class="keyword">function</span> &lt;lambda&gt; at 0x101c6ef28&gt;</span><br><span class="line">&gt;&gt;&gt; f(5)</span><br><span class="line">25</span><br></pre></td></tr></table></figure>
@@ -569,7 +581,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/5.html">
+    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ningning">
@@ -589,7 +601,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Blog/posts/5.html" class="post-title-link" itemprop="url">高级特性</a>
+                <a href="/Blog/posts/2.html" class="post-title-link" itemprop="url">高级特性</a>
               
             
           </h1>
@@ -614,12 +626,24 @@
                 
               
 
-              <time title="创建时间：2019-08-12 16:53:24 / 修改时间：17:01:29" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 16:53:24" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-30 15:40:19" itemprop="dateModified" datetime="2019-08-30T15:40:19+08:00">2019-08-30</time>
               
             
           </span>
@@ -799,7 +823,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/2.html">
+    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ningning">
@@ -819,7 +843,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Blog/posts/2.html" class="post-title-link" itemprop="url">python 基础</a>
+                <a href="/Blog/posts/0.html" class="post-title-link" itemprop="url">python 基础</a>
               
             
           </h1>
@@ -844,12 +868,24 @@
                 
               
 
-              <time title="创建时间：2019-08-12 16:53:24 / 修改时间：16:29:09" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 16:53:24" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-30 15:39:56" itemprop="dateModified" datetime="2019-08-30T15:39:56+08:00">2019-08-30</time>
               
             
           </span>
@@ -920,7 +956,8 @@
 <p>变量classmates就是一个list，list的索引是从0开始的，最后一个元素的索引是len(classmates)-1<br>除此之外，还可以用-1做索引,以此类推-2、-3等等</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;classmates[-1]</span><br><span class="line"><span class="string">'Tracy'</span></span><br></pre></td></tr></table></figure>
 
-<h5 id="list中的经常使用的方法"><a href="#list中的经常使用的方法" class="headerlink" title="list中的经常使用的方法"></a>list中的经常使用的方法</h5><p>1.append()<br>list是一个可变的有序表，所以，可以往list中追加元素到末尾</p>
+<p><strong>list中的经常使用的方法：</strong></p>
+<p>1.append()<br>list是一个可变的有序表，所以，可以往list中追加元素到末尾</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; classmates.append(<span class="string">'Adm'</span>)</span><br><span class="line">&gt;&gt;&gt; classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>, <span class="string">'Adm'</span>]</span><br></pre></td></tr></table></figure>
 
 <p>2.insert()<br>list可以把元素插入到指定的位置，比如索引号为1的位置</p>
@@ -933,14 +970,15 @@
 
 <p>pop(i)是删除指定位置的元素</p>
 <ol start="4">
-<li><p>把某个元素替换成别的元素</p>
+<li>把某个元素替换成别的元素</li>
+</ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; classmates[1] = <span class="string">'Sarah'</span></span><br><span class="line">&gt;&gt;&gt; classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Sarah'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>list元素也可以是另一个list，比如：</p>
+
+<ol start="5">
+<li>list元素也可以是另一个list，比如：</li>
+</ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s = [<span class="string">'python'</span>, <span class="string">'java'</span>,[<span class="string">'asp'</span>, <span class="string">'php'</span>], <span class="string">'scheme'</span>]</span><br><span class="line">&gt;&gt;&gt; len(s)</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
 <h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p>tuple是另一种有序列表即元祖，与list非常类似，但是tuple一旦初始化后就不能修改。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; classmates(<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>)</span><br></pre></td></tr></table></figure>
 
@@ -957,7 +995,8 @@
 
 <h3 id="if-elif-else语句"><a href="#if-elif-else语句" class="headerlink" title="if elif else语句"></a>if elif else语句</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">age = 3</span><br><span class="line"><span class="keyword">if</span> age &gt;= 18:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'adult'</span>)</span><br><span class="line"><span class="keyword">elif</span> age &gt;= 6:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'teenager'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'kid'</span>)</span><br></pre></td></tr></table></figure>
 
-<p>##循环<br>Python 的循环有两种，一种是for…in循环，另一种是while循环。</p>
+<p>##循环</p>
+<p>Python 的循环有两种，一种是for…in循环，另一种是while循环。</p>
 <h3 id="for…in循环"><a href="#for…in循环" class="headerlink" title="for…in循环"></a>for…in循环</h3><p>作用是依次把list或者tuple中的每个元素迭代出来。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">    <span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
 
@@ -984,7 +1023,8 @@
 <p>注意，传入的参数[1, 2, 3]是一个list，而显示的{1, 2, 3}只是告诉你这个set内部有1，2，3这3个元素，显示的顺序也不表示set是有序的。。<br>重复元素在set中自动被过滤：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s = <span class="built_in">set</span>([1, 1, 2, 2, 3, 3])</span><br><span class="line">&gt;&gt;&gt; s</span><br><span class="line">&#123;1, 2, 3&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="set的增删方法"><a href="#set的增删方法" class="headerlink" title="set的增删方法"></a>set的增删方法</h5><p>add(key): 添加元素到set中，可重复添加，但是不会有效果<br>remove(key): 删除元素</p>
+<p><strong>set的增删方法：</strong></p>
+<p>add(key): 添加元素到set中，可重复添加，但是不会有效果<br>remove(key): 删除元素</p>
 
           
         
@@ -1041,7 +1081,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/3.html">
+    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ningning">
@@ -1061,7 +1101,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Blog/posts/3.html" class="post-title-link" itemprop="url">python 基本函数</a>
+                <a href="/Blog/posts/1.html" class="post-title-link" itemprop="url">python 基本函数</a>
               
             
           </h1>
@@ -1086,12 +1126,24 @@
                 
               
 
-              <time title="创建时间：2019-08-12 16:53:24 / 修改时间：16:59:39" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 16:53:24" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-30 15:40:09" itemprop="dateModified" datetime="2019-08-30T15:40:09+08:00">2019-08-30</time>
               
             
           </span>
@@ -1243,7 +1295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/1.html">
+    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/12.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ningning">
@@ -1263,7 +1315,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Blog/posts/1.html" class="post-title-link" itemprop="url">DOM选择器</a>
+                <a href="/Blog/posts/12.html" class="post-title-link" itemprop="url">DOM选择器</a>
               
             
           </h1>
@@ -1288,12 +1340,24 @@
                 
               
 
-              <time title="创建时间：2019-08-12 16:53:24 / 修改时间：16:50:30" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 16:53:24" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-30 15:43:29" itemprop="dateModified" datetime="2019-08-30T15:43:29+08:00">2019-08-30</time>
               
             
           </span>
@@ -1443,7 +1507,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/0.html">
+    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/11.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ningning">
@@ -1463,7 +1527,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Blog/posts/0.html" class="post-title-link" itemprop="url">CSS快速入门</a>
+                <a href="/Blog/posts/11.html" class="post-title-link" itemprop="url">CSS工作原理</a>
               
             
           </h1>
@@ -1488,12 +1552,24 @@
                 
               
 
-              <time title="创建时间：2019-08-12 16:53:24 / 修改时间：18:15:01" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 16:53:24" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-30 19:02:12" itemprop="dateModified" datetime="2019-08-30T19:02:12+08:00">2019-08-30</time>
               
             
           </span>
@@ -1547,14 +1623,16 @@
       
         
           
-            <h2 id="入门语法介绍"><a href="#入门语法介绍" class="headerlink" title="入门语法介绍"></a>入门语法介绍</h2><h3 id="box-sizing属性"><a href="#box-sizing属性" class="headerlink" title="box-sizing属性"></a>box-sizing属性</h3><p>box-sizing,可以设定元素的大小该如何计算，包括两个属性：content-box 与 border-box</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    boc-sizing: content-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>每个HTML元素都有一组样式属性，可以通过CSS来设定。这些属性涉及元素在屏幕上显示时的不同方面，比如在屏幕上位置、边框的宽度，文本内容的字体、字号<br>和颜色，等等。CSS就是一种先选择HTML元素，然后设定选中元素CSS属性的机制。CSS选择符和要应用的样式构成了一条CSS 规则。</p>
+<h2 id="剖析CSS规则"><a href="#剖析CSS规则" class="headerlink" title="剖析CSS规则"></a>剖析CSS规则</h2><p>规则实际上就是一条完整的CSS 指令。规则声明了要修改的元素和要应用给该元素的样式。下面就是一条CSS规则，它可以把段落的文本设置为红色。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p &#123;color: red;&#125;</span><br></pre></td></tr></table></figure>
 
-<p>上面的代码box-sizing的默认值是content-box,对元素设置所设定的宽度会应用到该元素的内容上，而填充和边框会照常加上去<br>如果把值设置为border-box，则意味着设定的width值是内容、填充和边框的总宽度</p>
-<p>示例如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    border: 10px solid black;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">    padding: 10px;</span><br><span class="line">    width: 150px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>把以上代码放到我们的HTML5模板中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span>/&gt;</span><br><span class="line">    &lt;title&gt;An HTML Template&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        /*CSS样式要嵌入在页面head元素中的&lt;style&gt;标签里*/</span><br><span class="line">        p &#123;color: red;&#125;</span><br><span class="line">     &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;p&gt;This text is very important!&lt;/p&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
-<p>现在150px的宽度包括了填充和边框，二者在内容两侧都占据了10px，所以div元素的内容计算宽度就是110px，即150px减去20px的填充和20px的边框<br>对于Firefox来说，关于它的-moz-box-sizing属性，有额外的padding-box属性，使用这个值，计算元素属性时会对它的填充和内容进行计算，不包括边框</p>
+<p><code>&lt;body&gt;</code>元素中的<code>&lt;p&gt;</code>字段就会变成红色。<br><strong>为文档添加样式的三种方法：</strong><br>有三种方法可以把CSS添加到网页中，分别是写在元素标签里（也叫行内样式）、写在<code>&lt;style&gt;</code>标签里（也叫嵌入样式）和写在单独的CSS样式表中（也叫链接样式）。<br><strong>行内样式</strong><br>行内样式是写在特定HTML标签的style属性里的，比如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;This paragraph simply takes on the browser<span class="string">'s default paragraph style.&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p style="font-size: 12px; font-weight:bold; font-style:italic; color:red;"&gt;By</span></span><br><span class="line"><span class="string">adding inline CSS styling to this paragraph, you override the default styles.&lt;/p&gt;</span></span><br></pre></td></tr></table></figure>
+
 
           
         
