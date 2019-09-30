@@ -347,6 +347,218 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/12.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ningning">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小怪兽成长记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Blog/posts/12.html" class="post-title-link" itemprop="url">DOM选择器</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-12 16:53:24" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-24 15:18:47" itemprop="dateModified" datetime="2019-09-24T15:18:47+08:00">2019-09-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/CSS权威指南/" itemprop="url" rel="index"><span itemprop="name">CSS权威指南</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>属性选择器是在CSS2中引入的，他们能够指定一些规则，这些规则根据元素的属性（诸如href或title）以及这些属性的值对元素进行匹配</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">""</span> lang=<span class="string">"en-GB"</span> rel=<span class="string">"friend net"</span>&gt;Peter&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">""</span> lang=<span class="string">"es-ES"</span> rel-<span class="string">"fiend"</span>&gt;Pedro&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">""</span> lang=<span class="string">"es-MX"</span> rel-<span class="string">"contact"</span>&gt;Pancho&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="简单属性选择器"><a href="#简单属性选择器" class="headerlink" title="简单属性选择器"></a>简单属性选择器</h3><p>将规则应用到定义了指定属性的元素上，而不管属性的值是什么</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[rel] &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>由于所有元素都有rel属性，所以所有元素都会应用这条规则</p>
+<h3 id="精确属性值选择器"><a href="#精确属性值选择器" class="headerlink" title="精确属性值选择器"></a>精确属性值选择器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[rel=<span class="string">'friend'</span>] &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个代码只会将规则标记到第二个a元素</p>
+<h3 id="部分属性选择器"><a href="#部分属性选择器" class="headerlink" title="部分属性选择器"></a>部分属性选择器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[rel~=<span class="string">'friend'</span>] &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个代码会选择rel属性中带有friend的值的元素，则这个规则会标记到第一与第二个</p>
+<h3 id="语言属性选择器"><a href="#语言属性选择器" class="headerlink" title="语言属性选择器"></a>语言属性选择器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[lang|=<span class="string">'es'</span>] &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>选中所有属性值以es开头的lang语言，即会选中2和3</p>
+<h2 id="CSS3的新属性选择器"><a href="#CSS3的新属性选择器" class="headerlink" title="CSS3的新属性选择器"></a>CSS3的新属性选择器</h2><h3 id="开始字串属性值选择器（开始选择器）"><a href="#开始字串属性值选择器（开始选择器）" class="headerlink" title="开始字串属性值选择器（开始选择器）"></a>开始字串属性值选择器（开始选择器）</h3><p>该选择器会选择一些元素，这些元素所选择的属性是以一个字符串为起始，该字符串会作为参数提供给选择器，这个选择器使用插入符号(^)修饰属性中的等号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E[attr^=<span class="string">'value'</span>] &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这行代码将在指定属性的起始处寻找指定的值<br>示例如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Lorem ipsum dolor &lt;a href=<span class="string">"mailto:email@example.com"</span>&gt;email&lt;a&gt; sit amet.&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">a[href^=<span class="string">'mailto'</span>] &#123;</span><br><span class="line">    background-image: url(<span class="string">'email_go.png'</span>);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lorem ipsum dolor email sit amet.  <span class="comment">#这里的email是一个地址即上述href绑定的地址 email原为一图片索引，本人懒就没放图片</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="结束子串属性值选择器（结束选择器）"><a href="#结束子串属性值选择器（结束选择器）" class="headerlink" title="结束子串属性值选择器（结束选择器）"></a>结束子串属性值选择器（结束选择器）</h3><p>与开始选择器相反，使用该选择器去选择以指定的值结束的属性<br>语法差异为用($)去修饰(=)</p>
+<h3 id="任意子串属性值选择器（任意选择器）"><a href="#任意子串属性值选择器（任意选择器）" class="headerlink" title="任意子串属性值选择器（任意选择器）"></a>任意子串属性值选择器（任意选择器）</h3><p>该选择器使用规则即在指定的属性字符串的内部任意位置搜索指定的子串<br>该选择器使用的符号是(*)</p>
+<h3 id="多属性选择器"><a href="#多属性选择器" class="headerlink" title="多属性选择器"></a>多属性选择器</h3><p>可以把多个选择器串接在一起，这样在选择目标的时候能够做到非常的具体，使用多选择器，可以通过定义在开始、结束以及中间任意位置的值创建应用到属性上的规则</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;a href=<span class="string">"http://example.com/folder1/file.pdf"</span>&gt;Lorem ipsum&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;a href=<span class="string">"http://example.com/folder2/file.pdf"</span>&gt;Lorem ipsum&lt;/a&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p> 如果要指定一条只应用到第二个p元素的规则，可以把一些选择器串接到一起：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[href^=<span class="string">'http://'</span>][href*=<span class="string">'/folder2/'</span>][href$=<span class="string">'.pdf'</span>] &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这行代码会寻找这样的a元素，它具有一个href属性，是以 http: // 开始，以.pdf结束，并且在中间包含了/folder2/，非常明确</p>
+<h3 id="普通兄弟连结符"><a href="#普通兄弟连结符" class="headerlink" title="普通兄弟连结符"></a>普通兄弟连结符</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">E + F &#123;&#125; <span class="comment">#相邻兄弟连结符</span></span><br><span class="line">E ~ F &#123;&#125; <span class="comment">#普通兄弟连结符</span></span><br></pre></td></tr></table></figure>
+
+<p>相邻兄弟连结符选择的是文档树的同一层级，紧邻在元素(E)之后的任意元素；<br>普通兄弟连结符选择的是文档树的同一层级，位于元素(E)之后的任意元素。<br>示例如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Next we are going to discuss ... &lt;/p&gt;</span><br><span class="line">&lt;h2&gt;Ren&amp;eacute; Descartes&lt;/h2&gt;</span><br><span class="line">&lt;p&gt;A highly influential French philosopher...&lt;/p&gt;</span><br><span class="line">&lt;p&gt;He only famously declared:&lt;/p&gt;</span><br><span class="line">&lt;blockquote&gt;</span><br><span class="line">    &lt;p&gt;I think,therefore I am.&lt;/p&gt;</span><br><span class="line">&lt;/blockquote&gt;  </span><br><span class="line">&lt;p&gt;However,this presumes the existence of the speaker.&lt;/p&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">h2 + p &#123;</span><br><span class="line">    font-weight:bolder;</span><br><span class="line">&#125;</span><br><span class="line">h2 ~ p &#123;</span><br><span class="line">    font-style: italic;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果如下：</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/11.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -749,7 +961,7 @@
                 
                   <a href="/Blog/archives">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1320,6 +1532,8 @@
 
   
   
+    
+      
     
       
     

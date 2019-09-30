@@ -347,6 +347,215 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/7.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ningning">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小怪兽成长记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Blog/posts/7.html" class="post-title-link" itemprop="url">第四章 变量、作用域和内存问题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-12 21:09:15" itemprop="dateCreated datePublished" datetime="2019-08-12T21:09:15+08:00">2019-08-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-30 15:41:31" itemprop="dateModified" datetime="2019-08-30T15:41:31+08:00">2019-08-30</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/JavaScript高级程序设计/" itemprop="url" rel="index"><span itemprop="name">JavaScript高级程序设计</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="基本类型和引用类型的值"><a href="#基本类型和引用类型的值" class="headerlink" title="基本类型和引用类型的值"></a>基本类型和引用类型的值</h2><p>ECMAScript变量可能包含不同数据类型的值：基本类型值和引用类型值。<br>基本类型值：指的是简单的数据段，Undefined、Null、Boolean、Number和String这五种基本数据类型是按值访问的。<br>引用类型值：指的是那些可能由多个值构成的对象，引用类型的值是保存在内存中的对象。<br>与其他语言不同，JavaScript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间，在操作对象时，实际上是在操作对象的引用而不是实际的对象。</p>
+<h3 id="动态的属性"><a href="#动态的属性" class="headerlink" title="动态的属性"></a>动态的属性</h3><p>引用类型的值可以动态地添加属性和方法，也可以改变和删除其属性和方法，但是不能给基本类型的值添加属性</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 为引用类型的值添加属性并给属性赋值</span><br><span class="line">var person = new Object();</span><br><span class="line">person.name = <span class="string">"Nicholas"</span>;</span><br><span class="line">console.log(person.name);  // <span class="string">"Nicholas"</span></span><br><span class="line"></span><br><span class="line">//为基本类型的值添加属性会返回undefined,但是不会报错</span><br><span class="line">var name = <span class="string">"Nicholas"</span>;</span><br><span class="line">name.age = 27;</span><br><span class="line">console.log(name.age);  // undefined</span><br></pre></td></tr></table></figure>
+
+<h3 id="复制变量值"><a href="#复制变量值" class="headerlink" title="复制变量值"></a>复制变量值</h3><p>基本类型值与引用类型值复制变量是不同的。<br>如果从一个变量向另一个变量复制基本类型的值，会在变量对象上创建一个新值，然后把该值复制到为新变量分配的位置上，这两个变量可以参与任何操作而不会相互影响。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var num1 = 5;</span><br><span class="line">var num2 = num1;  // num1与num2的值都是5，但是他们两个相互之间没有影响</span><br></pre></td></tr></table></figure>
+
+<p>如果一个变量向另一个变量复制引用类型的值，同样也会将存储在变量对象中的值复制一份放到为新变量分配的空间中，但是这个值的副本实际上是一个指针，而这个指针指向存储在堆中的一个对象，复制结束后，两个变量实际上将引用同一个对象，改变一个变量，就会影响另一个变量。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var obj1 = new Object();</span><br><span class="line">var obj2 = obj1;</span><br><span class="line">obj1.name = <span class="string">"Nicholas"</span>;</span><br><span class="line">console.log(obj2.name); // <span class="string">"Nicholas"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h3><p>ECMAScript中所有函数的参数都是按值传递的。在向参数传递基本类型的值时，被传递的值会被复制给一个局部变量（即命名参数），<br>在向参数传递引用类型的值时，会把这个值在内存中的地址复制给一个局部变量。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> addTen(num) &#123;</span><br><span class="line">    num += 10;</span><br><span class="line">    <span class="built_in">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line">var count = 20;</span><br><span class="line">var result = addTen(count);</span><br><span class="line">console.log(count);  // 20</span><br><span class="line">console.log(result);  // 30</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测类型"><a href="#检测类型" class="headerlink" title="检测类型"></a>检测类型</h3><p>typeof 可以检测基本数据类型，instanceof可以检测引用数据类型。<br>根据规定，所有引用类型的值都是Object的实例，在检测一个引用类型值和Object构造函数时，instanceof操作符始终会返回true，<br>使用instanceof操作符检测基本类型的值，则该操作符始终会返回false。</p>
+<h2 id="执行环境及作用域"><a href="#执行环境及作用域" class="headerlink" title="执行环境及作用域"></a>执行环境及作用域</h2><p>执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为，每个执行环境都有一个与之关联的变量对象，环境中定义的所有变量和函数都保存在这个对象中。<br>全局执行环境是最外围的一个执行环境，在Web浏览器中，全局执行环境被认为是window对象，因此所有全局变量和函数都是作为window对象的属性和方法创建的。某个执行环境中的所有代码执行完毕后，该环境被销毁，保存在其中的所有便俩个和函数定义也随之销毁。<br>当代码在一个环境中执行时，会创建变量对象的一个作用域链，作用域链的用途是保证对执行环境有权访问的所有变量和函数的有序访问。<br>作用域链的前端始终都是当前执行的代码所在环境的变量对象。如果这个环境是函数，则将其活动对象作为变量对象，活动对象在一开始时只包含一个变量，即arguments对象（这个对象在全局环境中是不存在的）。<br>作用域链中的下一个变量对象包含（外部）环境，而再下一个变量对象则来自下一个包含环境，这样，一直延续到全局执行环境，全局执行环境中的变量对象始终都是作用域链中的最后一个对象。<br>标识符解析是沿着作用域链一级一级地搜索标识符的过程，搜索过程始终从作用域链的前端开始，然后逐级地向后回溯，直到找到标识符为止（如果找不到标识符，通常会导致错误发生）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var color = <span class="string">"blue"</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">changeColor</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span>(color == <span class="string">"blue"</span>)&#123;</span><br><span class="line">        color = <span class="string">"red"</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        color == <span class="string">"grey"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">changeColor();</span><br><span class="line">console.log(<span class="string">"Color is "</span> + color);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Color is red</span><br></pre></td></tr></table></figure>
+
+<p>上面例子中的函数changColor()的作用域链的中包含两个对象，它自己的变量对象（其中定义着arguments）和全局环境的变量对象。<br>作用域链为它自己的变量对象 ——&gt; 全局环境的变量对象</p>
+<h3 id="延长作用域链"><a href="#延长作用域链" class="headerlink" title="延长作用域链"></a>延长作用域链</h3><p>有些语句可以在作用域链的前端临时增加一个变量对象，该变量对象会在代码执行后被移除，在两种情况下会发生这种现象，出现以下两种现象时，执行流进入下列任何一个语句时，作用域链就会得到加长：</p>
+<ul>
+<li>try-catch 语句的 catch 块；</li>
+<li>with 语句。</li>
+</ul>
+<p>这两个语句都会在作用域的前端添加一个变量对象，对with语句来说，会将指定的对象添加到作用域链中；<br>对catch语句来说，会创建一个新的变量对象，其中包含的是被抛出的错误对象的声明。<br>如下面的例子所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">buildUrl</span></span> () &#123;</span><br><span class="line">    var qs = <span class="string">"?debug=true"</span>;</span><br><span class="line">    with(location)[</span><br><span class="line">        var url = href + qs;</span><br><span class="line">    ]</span><br><span class="line">    <span class="built_in">return</span> url;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，with语句接收的是location对象，因此其变量对象中就包含了location对象的所有属性和方法，而这个变量对象被添加进了作用域链的前端，buildUrl()函数中定义了一个变量qs，当在with语句中引用变量href时（实际引用的是location.href），可以在当前执行环境的变量对象中找到，当引用变量qs时，引用的则是在buildUrl()中定义的那个变量，而该变量位于函数环境的变量对象中，因此with内部的url就成了函数执行环境的一部分，可以作为函数的值返回。</p>
+<h3 id="没有块级作用域"><a href="#没有块级作用域" class="headerlink" title="没有块级作用域"></a>没有块级作用域</h3><p>JavaScript没有块级作用域，在其他类C的语言中，由花括号封闭的代码都有自己的作用域（用ECMAScript的话来说就是他们自己的执行环境）。<br>因而支持根据条件来定义变量，例如，下面的代码在JavaScript中并不会得到想象中的结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    var color = <span class="string">"blue"</span>;</span><br><span class="line">&#125;</span><br><span class="line">console.log(color); //<span class="string">"blue"</span></span><br></pre></td></tr></table></figure>
+
+<p>这个例子，如果是在C、C++或Java中，color会在if语句执行完毕后被销毁，但是在JavaScript中，if语句中的变量声明会将变量添加到当前的执行环境（在这里是全局环境）中。<br>使用for语句时也会发生这样的情况。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (var i=0; i&lt;10;i++) &#123;</span><br><span class="line">    doSomething(i);</span><br><span class="line">&#125;</span><br><span class="line">console.log(i);  // 10</span><br></pre></td></tr></table></figure>
+
+<p>for循环执行结束后，由for语句创建的i依旧存在于循环外部的执行环境中。<br><strong>解决这种办法ES6使用let声明变量，用let声明可以将作用域限制在当前块中。</strong><br><strong>声明变量：</strong>使用var声明的变量会自动被添加进最接近的环境中，在函数内部，最接近的环境就是函数的局部环境，在with语句中，最接近的环境是函数环境，如果初始化变量时没有使用var声明，该变量会自动添加进全局环境。<br><strong>查询标识符：</strong>搜索过程从作用域链的前端开始，向上逐级查询给定名字匹配的标识符。如果在局部环境中找到了该标识符，搜索过程停止，变量就绪；如果在局部环境中没有找到该变量名，则继续沿作用域链向上搜索，搜索过程一直追溯到全局环境的变量对象，如果在全局环境中也没有找到这个标识符，则意味着该变量尚未声明。</p>
+<h3 id="垃圾收集"><a href="#垃圾收集" class="headerlink" title="垃圾收集"></a>垃圾收集</h3><p>JavaScript具有自动垃圾收集机制，垃圾收集器跟踪哪个变量有用，哪个变量没用，对于不再有用的变量打上标记，以备将来收回其占用的内存，用于标识无用变量的策略主要有以下两种办法：<br>标记清除：垃圾收集器在运行的时候会给存储在内存中的所有变量都加上标记，然后，它会去除环境中的变量以及被环境中的变量引用的变量的标记，而在此之后再被加上标记的变量将被视为准备删除的变量，原因是环境中的变量已经无法访问到这些变量了，最后垃圾收集器完成内存清除工作，销毁那些带标记的值并回收它们所占用的内存空间。<br>引用计数：引用计数的含义是跟踪记录每个值被引用的次数。当声明了一个变量并将一个引用类型值赋给变量时，则这个值的引用次数就是1，如果同一个值又被赋给另一个变量，则该值的引用次数加1；相反，如果包含对这个值引用的变量又取得了另外一个值，则这个值的引用次数减1，当这个值的引用次数变成0时，则说明没有办法再访问这个值了，因而就可以将其占用的内存空间收回来。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/15.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2396,218 +2605,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ningning666.github.io/Blog/Blog/posts/12.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ningning">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/Blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小怪兽成长记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Blog/posts/12.html" class="post-title-link" itemprop="url">DOM选择器</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-12 16:53:24" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-09-24 15:18:47" itemprop="dateModified" datetime="2019-09-24T15:18:47+08:00">2019-09-24</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/CSS权威指南/" itemprop="url" rel="index"><span itemprop="name">CSS权威指南</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>属性选择器是在CSS2中引入的，他们能够指定一些规则，这些规则根据元素的属性（诸如href或title）以及这些属性的值对元素进行匹配</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">""</span> lang=<span class="string">"en-GB"</span> rel=<span class="string">"friend net"</span>&gt;Peter&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">""</span> lang=<span class="string">"es-ES"</span> rel-<span class="string">"fiend"</span>&gt;Pedro&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">""</span> lang=<span class="string">"es-MX"</span> rel-<span class="string">"contact"</span>&gt;Pancho&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="简单属性选择器"><a href="#简单属性选择器" class="headerlink" title="简单属性选择器"></a>简单属性选择器</h3><p>将规则应用到定义了指定属性的元素上，而不管属性的值是什么</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[rel] &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>由于所有元素都有rel属性，所以所有元素都会应用这条规则</p>
-<h3 id="精确属性值选择器"><a href="#精确属性值选择器" class="headerlink" title="精确属性值选择器"></a>精确属性值选择器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[rel=<span class="string">'friend'</span>] &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个代码只会将规则标记到第二个a元素</p>
-<h3 id="部分属性选择器"><a href="#部分属性选择器" class="headerlink" title="部分属性选择器"></a>部分属性选择器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[rel~=<span class="string">'friend'</span>] &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个代码会选择rel属性中带有friend的值的元素，则这个规则会标记到第一与第二个</p>
-<h3 id="语言属性选择器"><a href="#语言属性选择器" class="headerlink" title="语言属性选择器"></a>语言属性选择器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[lang|=<span class="string">'es'</span>] &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>选中所有属性值以es开头的lang语言，即会选中2和3</p>
-<h2 id="CSS3的新属性选择器"><a href="#CSS3的新属性选择器" class="headerlink" title="CSS3的新属性选择器"></a>CSS3的新属性选择器</h2><h3 id="开始字串属性值选择器（开始选择器）"><a href="#开始字串属性值选择器（开始选择器）" class="headerlink" title="开始字串属性值选择器（开始选择器）"></a>开始字串属性值选择器（开始选择器）</h3><p>该选择器会选择一些元素，这些元素所选择的属性是以一个字符串为起始，该字符串会作为参数提供给选择器，这个选择器使用插入符号(^)修饰属性中的等号</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E[attr^=<span class="string">'value'</span>] &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这行代码将在指定属性的起始处寻找指定的值<br>示例如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Lorem ipsum dolor &lt;a href=<span class="string">"mailto:email@example.com"</span>&gt;email&lt;a&gt; sit amet.&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">a[href^=<span class="string">'mailto'</span>] &#123;</span><br><span class="line">    background-image: url(<span class="string">'email_go.png'</span>);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lorem ipsum dolor email sit amet.  <span class="comment">#这里的email是一个地址即上述href绑定的地址 email原为一图片索引，本人懒就没放图片</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="结束子串属性值选择器（结束选择器）"><a href="#结束子串属性值选择器（结束选择器）" class="headerlink" title="结束子串属性值选择器（结束选择器）"></a>结束子串属性值选择器（结束选择器）</h3><p>与开始选择器相反，使用该选择器去选择以指定的值结束的属性<br>语法差异为用($)去修饰(=)</p>
-<h3 id="任意子串属性值选择器（任意选择器）"><a href="#任意子串属性值选择器（任意选择器）" class="headerlink" title="任意子串属性值选择器（任意选择器）"></a>任意子串属性值选择器（任意选择器）</h3><p>该选择器使用规则即在指定的属性字符串的内部任意位置搜索指定的子串<br>该选择器使用的符号是(*)</p>
-<h3 id="多属性选择器"><a href="#多属性选择器" class="headerlink" title="多属性选择器"></a>多属性选择器</h3><p>可以把多个选择器串接在一起，这样在选择目标的时候能够做到非常的具体，使用多选择器，可以通过定义在开始、结束以及中间任意位置的值创建应用到属性上的规则</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;a href=<span class="string">"http://example.com/folder1/file.pdf"</span>&gt;Lorem ipsum&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;a href=<span class="string">"http://example.com/folder2/file.pdf"</span>&gt;Lorem ipsum&lt;/a&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-
-<p> 如果要指定一条只应用到第二个p元素的规则，可以把一些选择器串接到一起：</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[href^=<span class="string">'http://'</span>][href*=<span class="string">'/folder2/'</span>][href$=<span class="string">'.pdf'</span>] &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这行代码会寻找这样的a元素，它具有一个href属性，是以 http: // 开始，以.pdf结束，并且在中间包含了/folder2/，非常明确</p>
-<h3 id="普通兄弟连结符"><a href="#普通兄弟连结符" class="headerlink" title="普通兄弟连结符"></a>普通兄弟连结符</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">E + F &#123;&#125; <span class="comment">#相邻兄弟连结符</span></span><br><span class="line">E ~ F &#123;&#125; <span class="comment">#普通兄弟连结符</span></span><br></pre></td></tr></table></figure>
-
-<p>相邻兄弟连结符选择的是文档树的同一层级，紧邻在元素(E)之后的任意元素；<br>普通兄弟连结符选择的是文档树的同一层级，位于元素(E)之后的任意元素。<br>示例如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Next we are going to discuss ... &lt;/p&gt;</span><br><span class="line">&lt;h2&gt;Ren&amp;eacute; Descartes&lt;/h2&gt;</span><br><span class="line">&lt;p&gt;A highly influential French philosopher...&lt;/p&gt;</span><br><span class="line">&lt;p&gt;He only famously declared:&lt;/p&gt;</span><br><span class="line">&lt;blockquote&gt;</span><br><span class="line">    &lt;p&gt;I think,therefore I am.&lt;/p&gt;</span><br><span class="line">&lt;/blockquote&gt;  </span><br><span class="line">&lt;p&gt;However,this presumes the existence of the speaker.&lt;/p&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">h2 + p &#123;</span><br><span class="line">    font-weight:bolder;</span><br><span class="line">&#125;</span><br><span class="line">h2 ~ p &#123;</span><br><span class="line">    font-style: italic;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>输出结果如下：</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2654,7 +2651,7 @@
                 
                   <a href="/Blog/archives">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
