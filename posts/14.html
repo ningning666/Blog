@@ -94,18 +94,18 @@
 
 
 
-  <meta name="description" content="基本概念合术语数据数据：是描述客观事物的符号，是计算机中可以操作的对象，是能被计算机识别，并输入给计算机处理的符号集合。 数据元素数据元素：是组成数据的、有一定意义的基本单位，在计算机中通常作为整体处理，也被称为记录。 数据项数据项：一个数据元素可以由若干个数据项组成；数据项是数据不可分割的最小单位。但是在真正讨论问题时，数据元素才是数据结构中建立数据模型的着眼点。 数据对象数据对象：是性质相同的">
-<meta name="keywords" content="数据结构">
+  <meta name="description" content="列表的抽象数据类型列表是一组有序的数据，每个列表中的数据项称为元素，在JavaScript中，列表中的元素可以是任意数据类型，列表中可以保存多少元素没有事先限定，实际使用时元素的数量受到程序内存的限制。 列表的抽象数据类型定义如下所示：    属性名 说明    listSize(属性) 列表的元素个数   pos(属性) 列表的当前位置   length(属性) 返回列表中元素的个数   cle">
+<meta name="keywords" content="数据结构与算法JavaScript描述">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构绪论">
+<meta property="og:title" content="列表">
 <meta property="og:url" content="https://ningning666.github.io/Blog/posts/14.html">
 <meta property="og:site_name" content="小怪兽成长记">
-<meta property="og:description" content="基本概念合术语数据数据：是描述客观事物的符号，是计算机中可以操作的对象，是能被计算机识别，并输入给计算机处理的符号集合。 数据元素数据元素：是组成数据的、有一定意义的基本单位，在计算机中通常作为整体处理，也被称为记录。 数据项数据项：一个数据元素可以由若干个数据项组成；数据项是数据不可分割的最小单位。但是在真正讨论问题时，数据元素才是数据结构中建立数据模型的着眼点。 数据对象数据对象：是性质相同的">
+<meta property="og:description" content="列表的抽象数据类型列表是一组有序的数据，每个列表中的数据项称为元素，在JavaScript中，列表中的元素可以是任意数据类型，列表中可以保存多少元素没有事先限定，实际使用时元素的数量受到程序内存的限制。 列表的抽象数据类型定义如下所示：    属性名 说明    listSize(属性) 列表的元素个数   pos(属性) 列表的当前位置   length(属性) 返回列表中元素的个数   cle">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-30T07:43:37.747Z">
+<meta property="og:updated_time" content="2019-11-11T11:07:24.077Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构绪论">
-<meta name="twitter:description" content="基本概念合术语数据数据：是描述客观事物的符号，是计算机中可以操作的对象，是能被计算机识别，并输入给计算机处理的符号集合。 数据元素数据元素：是组成数据的、有一定意义的基本单位，在计算机中通常作为整体处理，也被称为记录。 数据项数据项：一个数据元素可以由若干个数据项组成；数据项是数据不可分割的最小单位。但是在真正讨论问题时，数据元素才是数据结构中建立数据模型的着眼点。 数据对象数据对象：是性质相同的">
+<meta name="twitter:title" content="列表">
+<meta name="twitter:description" content="列表的抽象数据类型列表是一组有序的数据，每个列表中的数据项称为元素，在JavaScript中，列表中的元素可以是任意数据类型，列表中可以保存多少元素没有事先限定，实际使用时元素的数量受到程序内存的限制。 列表的抽象数据类型定义如下所示：    属性名 说明    listSize(属性) 列表的元素个数   pos(属性) 列表的当前位置   length(属性) 返回列表中元素的个数   cle">
 
 
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>数据结构绪论 | 小怪兽成长记</title>
+  <title>列表 | 小怪兽成长记</title>
   
 
 
@@ -368,7 +368,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构绪论
+          <h1 class="post-title" itemprop="name headline">列表
 
               
             
@@ -394,7 +394,7 @@
                 
               
 
-              <time title="创建时间：2019-08-12 16:53:24" itemprop="dateCreated datePublished" datetime="2019-08-12T16:53:24+08:00">2019-08-12</time>
+              <time title="创建时间：2019-11-10 19:07:23" itemprop="dateCreated datePublished" datetime="2019-11-10T19:07:23+08:00">2019-11-10</time>
             
 
             
@@ -411,7 +411,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-30 15:43:37" itemprop="dateModified" datetime="2019-08-30T15:43:37+08:00">2019-08-30</time>
+                <time title="修改时间：2019-11-11 19:07:24" itemprop="dateModified" datetime="2019-11-11T19:07:24+08:00">2019-11-11</time>
               
             
           </span>
@@ -428,7 +428,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/数据结构与算法JavaScript描述/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法JavaScript描述</span></a></span>
 
                 
                 
@@ -463,14 +463,142 @@
       
 
       
-        <h2 id="基本概念合术语"><a href="#基本概念合术语" class="headerlink" title="基本概念合术语"></a>基本概念合术语</h2><h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><p>数据：是描述客观事物的符号，是计算机中可以操作的对象，是能被计算机识别，并输入给计算机处理的符号集合。</p>
-<h3 id="数据元素"><a href="#数据元素" class="headerlink" title="数据元素"></a>数据元素</h3><p>数据元素：是组成数据的、有一定意义的基本单位，在计算机中通常作为整体处理，也被称为记录。</p>
-<h3 id="数据项"><a href="#数据项" class="headerlink" title="数据项"></a>数据项</h3><p>数据项：一个数据元素可以由若干个数据项组成；数据项是数据不可分割的最小单位。<br>但是在真正讨论问题时，数据元素才是数据结构中建立数据模型的着眼点。</p>
-<h3 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h3><p>数据对象：是性质相同的数据元素的集合，是数据的子集。</p>
-<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>数据对象：是相互之间存在一种或多种特定关系的数据元素的集合。</p>
-<h2 id="逻辑结构与物理结构"><a href="#逻辑结构与物理结构" class="headerlink" title="逻辑结构与物理结构"></a>逻辑结构与物理结构</h2><h3 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><p>集合结构：集合结构中的数据元素除了同属于一个集合外，他们之间没有其他联系，类似于数学中的集合<br>线性结构：线性结构中的数据元素之间是一对一的关系<br>树形结构：树形结构的数据元素之间存在一种一对多的层次关系<br>图形结构：图形结构之间的数据元素是多对多的关系</p>
-<h3 id="物理结构（存储结构）"><a href="#物理结构（存储结构）" class="headerlink" title="物理结构（存储结构）"></a>物理结构（存储结构）</h3><p>物理结构：是指数据的逻辑结构在计算机中的存储形式<br>数据元素的存储结构有两种：<br>顺序存储结构：是把数据元素存放在地址连续的存储单元里，其数据间的逻辑关系和物理关系是一致的<br>链式存储结构：是把数据元素存放在任意的存储单元里，这组存储单元可以是连续的，也可以是不连续的</p>
-<h2 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h2><p>数据类型：是指一组性质相同的值的集合及定义在此集合上的一些操作的总称<br>在C语言中，按照取值的不同，数据类型可以分为两类<br>原子类型：是不可以再分解的基本类型，包括整型、实型、字符型等<br>结构类型：由若干个类型组合而成，是可以再分解的。例如：整形数组是由若干个整型数据组成的<br>抽象是指抽象出事物具有的普遍性的本质。</p>
+        <h2 id="列表的抽象数据类型"><a href="#列表的抽象数据类型" class="headerlink" title="列表的抽象数据类型"></a>列表的抽象数据类型</h2><p>列表是一组有序的数据，每个列表中的数据项称为元素，在JavaScript中，列表中的元素可以是任意数据类型，列表中可以保存多少元素没有事先限定，实际使用时元素的数量受到程序内存的限制。</p>
+<p>列表的抽象数据类型定义如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>listSize(属性)</td>
+<td>列表的元素个数</td>
+</tr>
+<tr>
+<td>pos(属性)</td>
+<td>列表的当前位置</td>
+</tr>
+<tr>
+<td>length(属性)</td>
+<td>返回列表中元素的个数</td>
+</tr>
+<tr>
+<td>clear(方法)</td>
+<td>清空列表中的所有元素</td>
+</tr>
+<tr>
+<td>toString(方法)</td>
+<td>返回列表的字符串形式</td>
+</tr>
+<tr>
+<td>getElement(方法)</td>
+<td>返回当前位置的元素</td>
+</tr>
+<tr>
+<td>insert(方法)</td>
+<td>在现有元素后插入新元素</td>
+</tr>
+<tr>
+<td>append(方法)</td>
+<td>在列表的末尾添加新元素</td>
+</tr>
+<tr>
+<td>remove(方法)</td>
+<td>从列表中删除元素</td>
+</tr>
+<tr>
+<td>front(方法)</td>
+<td>将列表的当前位置移动到第一个元素</td>
+</tr>
+<tr>
+<td>end(方法)</td>
+<td>将列表的当前位置移动到最后一个元素</td>
+</tr>
+<tr>
+<td>prev(方法)</td>
+<td>将当前位置前移一位</td>
+</tr>
+<tr>
+<td>next(方法)</td>
+<td>将当前位置后移一位</td>
+</tr>
+<tr>
+<td>currPos(方法)</td>
+<td>返回列表的当前位置</td>
+</tr>
+<tr>
+<td>moveTo(方法)</td>
+<td>将当前位置移动到指定位置</td>
+</tr>
+</tbody></table>
+<h2 id="实现列表类"><a href="#实现列表类" class="headerlink" title="实现列表类"></a>实现列表类</h2><p>定义一个List类：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">List</span></span>() &#123;</span><br><span class="line">    this.listSize = 0;</span><br><span class="line">    this.pos = 0;</span><br><span class="line">    this.dataStore = []; <span class="comment"># 初始化一个空数组来保存列表元素</span></span><br><span class="line">    this.clear = clear;</span><br><span class="line">    this.find = find;</span><br><span class="line">    this.toString = toString;</span><br><span class="line">    this.insert = insert;</span><br><span class="line">    this.append = append;</span><br><span class="line">    this.remove = remove;</span><br><span class="line">    this.front = front;</span><br><span class="line">    this.end = end;</span><br><span class="line">    this.prev = prev;</span><br><span class="line">    this.next = next;</span><br><span class="line">    this.length = length;</span><br><span class="line">    this.currPos = currPos;</span><br><span class="line">    this.moveTo = moveTo;</span><br><span class="line">    this.getElement = getElement;</span><br><span class="line">    this.length = length;</span><br><span class="line">    this.contains = contains;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="append：给列表添加元素"><a href="#append：给列表添加元素" class="headerlink" title="append：给列表添加元素"></a>append：给列表添加元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> append(element) &#123;</span><br><span class="line">    this.dataStore(this.listSize++) = element;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="find-在列表中查找某一元素"><a href="#find-在列表中查找某一元素" class="headerlink" title="find: 在列表中查找某一元素"></a>find: 在列表中查找某一元素</h3><p>find()方法通过对数组对象dataStore进行迭代，查找给定的元素。如果找到就返回该元素在列表中的位置，否则返回-1。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> find(element) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; this.dataStore.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (this.dataStore[i] == element) &#123;</span><br><span class="line">            <span class="built_in">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="remove：-从列表中删除元素"><a href="#remove：-从列表中删除元素" class="headerlink" title="remove： 从列表中删除元素"></a>remove： 从列表中删除元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> remove(element) &#123;</span><br><span class="line">    <span class="keyword">if</span>(this.find(element) &gt; -1) &#123;</span><br><span class="line">        this.dataStore.splice(this.find(element), 1);</span><br><span class="line">        --this.listSize;</span><br><span class="line">        <span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="length-列表中有多少个元素"><a href="#length-列表中有多少个元素" class="headerlink" title="length: 列表中有多少个元素"></a>length: 列表中有多少个元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">length</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> this.listSize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="toString-显示列表中的元素"><a href="#toString-显示列表中的元素" class="headerlink" title="toString: 显示列表中的元素"></a>toString: 显示列表中的元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">toString</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> this.dataStore;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该方法返回的是一个数组，不是字符串。</p>
+<h3 id="insert-向列表中插入一个元素-假设插入是指插入到某个元素之后"><a href="#insert-向列表中插入一个元素-假设插入是指插入到某个元素之后" class="headerlink" title="insert: 向列表中插入一个元素(假设插入是指插入到某个元素之后)"></a>insert: 向列表中插入一个元素(假设插入是指插入到某个元素之后)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> insert(elment,after) &#123;</span><br><span class="line">    var insertPos = this.find(after);</span><br><span class="line">    <span class="keyword">if</span> (insertPos &gt; -1) &#123;</span><br><span class="line">        this.dataStore.splice(insertPos+1, 0, element)</span><br><span class="line">        ++listSize;</span><br><span class="line">        <span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="clear-清空列表中的所有元素"><a href="#clear-清空列表中的所有元素" class="headerlink" title="clear: 清空列表中的所有元素"></a>clear: 清空列表中的所有元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">clear</span></span>() &#123;</span><br><span class="line">    delete this.dataStore;</span><br><span class="line">    this.dataStore = [];</span><br><span class="line">    this.listSize = this.pos = 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="contains-判断给定值是否在列表中"><a href="#contains-判断给定值是否在列表中" class="headerlink" title="contains: 判断给定值是否在列表中"></a>contains: 判断给定值是否在列表中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> contains(element) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; this.dataStore.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (this.dataStore[i] == element) &#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="遍历列表"><a href="#遍历列表" class="headerlink" title="遍历列表"></a>遍历列表</h3><ul>
+<li>front: 将列表的当前位置移动到第一个元素</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">front</span></span>() &#123;</span><br><span class="line">    this.pos = 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>end: 将列表的当前位置移动到最后一个元素</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">end</span></span>() &#123;</span><br><span class="line">    this.pos = this.listSize - 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>prev: 将当前位置前移一位</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">prev</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span> (this.pos &gt; 0) &#123;</span><br><span class="line">        --this.pos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>next: 将当前位置后移一位</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">next</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span>(this.pos &lt; (this.listSize-1)) &#123;</span><br><span class="line">        ++this.pos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>currPos: 返回列表的当前位置</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">currPos</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> this.pos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>moveTo: 将当前位置移动到指定位置</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> moveTo(position) &#123;</span><br><span class="line">    this.pos = position;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>getElement: 返回列表的当前位置的元素</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getElement</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> this.dataStore[this.pos];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用迭代器访问列表"><a href="#使用迭代器访问列表" class="headerlink" title="使用迭代器访问列表"></a>使用迭代器访问列表</h2><p>使用迭代器，可以不用关心数据的内部存储方式，以实现对列表的遍历。使用迭代器的优点如下：</p>
+<ul>
+<li>访问列表元素时不必关心底层的数据存储结构</li>
+<li>当为列表添加一个元素时，索引的值就不对了，此时只用更新列表，不用更新迭代器。</li>
+<li>可以用不同类型的数据存储方式实现 cList 类，迭代器为访问列表里的元素提供了一种统一的方式。</li>
+</ul>
+<p>使用迭代器遍历列表的例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (names.front(); names.currPos() &lt; names.length; names.next()) &#123;</span><br><span class="line">    console.log(names.getElement());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在for 循环的一开始，将列表的当前位置设置为第一个元素。只要currPos 的值小于列表的长度，就一直循环，每一次循环都调用next() 方法将当前位置向前移动一位。</p>
 
       
     </div>
@@ -497,7 +625,7 @@
         
         <div class="post-tags">
           
-            <a href="/Blog/tags/数据结构/" rel="tag"># 数据结构</a>
+            <a href="/Blog/tags/数据结构与算法JavaScript描述/" rel="tag"># 数据结构与算法JavaScript描述</a>
           
         </div>
       
@@ -510,8 +638,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Blog/posts/6.html" rel="next" title="面向对象高级编程">
-                <i class="fa fa-chevron-left"></i> 面向对象高级编程
+              <a href="/Blog/posts/23.html" rel="next" title="二维数组、对象数组">
+                <i class="fa fa-chevron-left"></i> 二维数组、对象数组
               </a>
             
           </div>
@@ -520,8 +648,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Blog/posts/15.html" rel="prev" title="线性表">
-                线性表 <i class="fa fa-chevron-right"></i>
+              <a href="/Blog/posts/15.html" rel="prev" title="栈">
+                栈 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -591,7 +719,7 @@
                 
                   <a href="/Blog/archives">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -691,7 +819,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念合术语"><span class="nav-number">1.</span> <span class="nav-text">基本概念合术语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据"><span class="nav-number">1.1.</span> <span class="nav-text">数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据元素"><span class="nav-number">1.2.</span> <span class="nav-text">数据元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据项"><span class="nav-number">1.3.</span> <span class="nav-text">数据项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据对象"><span class="nav-number">1.4.</span> <span class="nav-text">数据对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">1.5.</span> <span class="nav-text">数据结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑结构与物理结构"><span class="nav-number">2.</span> <span class="nav-text">逻辑结构与物理结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑结构"><span class="nav-number">2.1.</span> <span class="nav-text">逻辑结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理结构（存储结构）"><span class="nav-number">2.2.</span> <span class="nav-text">物理结构（存储结构）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象数据类型"><span class="nav-number">3.</span> <span class="nav-text">抽象数据类型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#列表的抽象数据类型"><span class="nav-number">1.</span> <span class="nav-text">列表的抽象数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现列表类"><span class="nav-number">2.</span> <span class="nav-text">实现列表类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#append：给列表添加元素"><span class="nav-number">2.1.</span> <span class="nav-text">append：给列表添加元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-在列表中查找某一元素"><span class="nav-number">2.2.</span> <span class="nav-text">find: 在列表中查找某一元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove：-从列表中删除元素"><span class="nav-number">2.3.</span> <span class="nav-text">remove： 从列表中删除元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#length-列表中有多少个元素"><span class="nav-number">2.4.</span> <span class="nav-text">length: 列表中有多少个元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toString-显示列表中的元素"><span class="nav-number">2.5.</span> <span class="nav-text">toString: 显示列表中的元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insert-向列表中插入一个元素-假设插入是指插入到某个元素之后"><span class="nav-number">2.6.</span> <span class="nav-text">insert: 向列表中插入一个元素(假设插入是指插入到某个元素之后)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clear-清空列表中的所有元素"><span class="nav-number">2.7.</span> <span class="nav-text">clear: 清空列表中的所有元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#contains-判断给定值是否在列表中"><span class="nav-number">2.8.</span> <span class="nav-text">contains: 判断给定值是否在列表中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历列表"><span class="nav-number">2.9.</span> <span class="nav-text">遍历列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用迭代器访问列表"><span class="nav-number">3.</span> <span class="nav-text">使用迭代器访问列表</span></a></li></ol></div>
             
 
           </div>
