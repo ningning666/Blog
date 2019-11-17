@@ -94,18 +94,18 @@
 
 
 
-  <meta name="description" content="变量声明的工作方式历来是JS编程中最微妙的部分之一。在大多数类C语言中，变量（或绑定）总是在它被声明的地方创建。然而JS就不是这样，变量实际创建的位置取决于你如何声明它，而ES6提供了额外选择以便你能更轻易地控制变量的作用域。 var声明与变量提升使用var关键字声明的变量，无论其实际声明位置在何处，都会被视为声明于所在函数的顶部（如果声明不在任意函数内，则视为在全局作用域的顶部），这种方式就">
+  <meta name="description" content="变量声明的工作方式历来是JS编程中最微妙的部分之一。在大多数类C语言中，变量（或绑定）总是在它被声明的地方创建。然而JS就不是这样，变量实际创建的位置取决于你如何声明它，而ES6提供了额外选择以便你能更轻易地控制变量的作用域。 var声明与变量提升使用var关键字声明的变量，无论其实际声明位置在何处，都会被视为声明于所在函数的顶部（如果声明不在任意函数内，则视为在全局作用域的顶部），这种方式就是变">
 <meta name="keywords" content="深入理解ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="块级作用域绑定">
 <meta property="og:url" content="https://ningning666.github.io/Blog/posts/19.html">
-<meta property="og:site_name" content="小怪兽成长记">
-<meta property="og:description" content="变量声明的工作方式历来是JS编程中最微妙的部分之一。在大多数类C语言中，变量（或绑定）总是在它被声明的地方创建。然而JS就不是这样，变量实际创建的位置取决于你如何声明它，而ES6提供了额外选择以便你能更轻易地控制变量的作用域。 var声明与变量提升使用var关键字声明的变量，无论其实际声明位置在何处，都会被视为声明于所在函数的顶部（如果声明不在任意函数内，则视为在全局作用域的顶部），这种方式就">
+<meta property="og:site_name" content="宁宁的学习笔记">
+<meta property="og:description" content="变量声明的工作方式历来是JS编程中最微妙的部分之一。在大多数类C语言中，变量（或绑定）总是在它被声明的地方创建。然而JS就不是这样，变量实际创建的位置取决于你如何声明它，而ES6提供了额外选择以便你能更轻易地控制变量的作用域。 var声明与变量提升使用var关键字声明的变量，无论其实际声明位置在何处，都会被视为声明于所在函数的顶部（如果声明不在任意函数内，则视为在全局作用域的顶部），这种方式就是变">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-24T07:05:44.301Z">
+<meta property="og:updated_time" content="2019-11-17T11:48:38.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="块级作用域绑定">
-<meta name="twitter:description" content="变量声明的工作方式历来是JS编程中最微妙的部分之一。在大多数类C语言中，变量（或绑定）总是在它被声明的地方创建。然而JS就不是这样，变量实际创建的位置取决于你如何声明它，而ES6提供了额外选择以便你能更轻易地控制变量的作用域。 var声明与变量提升使用var关键字声明的变量，无论其实际声明位置在何处，都会被视为声明于所在函数的顶部（如果声明不在任意函数内，则视为在全局作用域的顶部），这种方式就">
+<meta name="twitter:description" content="变量声明的工作方式历来是JS编程中最微妙的部分之一。在大多数类C语言中，变量（或绑定）总是在它被声明的地方创建。然而JS就不是这样，变量实际创建的位置取决于你如何声明它，而ES6提供了额外选择以便你能更轻易地控制变量的作用域。 var声明与变量提升使用var关键字声明的变量，无论其实际声明位置在何处，都会被视为声明于所在函数的顶部（如果声明不在任意函数内，则视为在全局作用域的顶部），这种方式就是变">
 
 
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>块级作用域绑定 | 小怪兽成长记</title>
+  <title>块级作用域绑定 | 宁宁的学习笔记</title>
   
 
 
@@ -182,7 +182,7 @@
     <div class="custom-logo-site-title">
       <a href="/Blog/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">小怪兽成长记</span>
+        <span class="site-title">宁宁的学习笔记</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -360,7 +360,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小怪兽成长记">
+      <meta itemprop="name" content="宁宁的学习笔记">
     </span>
 
     
@@ -394,12 +394,24 @@
                 
               
 
-              <time title="创建时间：2019-09-24 10:20:08 / 修改时间：15:05:44" itemprop="dateCreated datePublished" datetime="2019-09-24T10:20:08+08:00">2019-09-24</time>
+              <time title="创建时间：2019-09-24 10:20:08" itemprop="dateCreated datePublished" datetime="2019-09-24T10:20:08+08:00">2019-09-24</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-17 19:48:38" itemprop="dateModified" datetime="2019-11-17T19:48:38+08:00">2019-11-17</time>
               
             
           </span>
@@ -451,14 +463,12 @@
       
 
       
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-<p>变量声明的工作方式历来是JS编程中最微妙的部分之一。在大多数类C语言中，变量（或绑定）总是在它被声明的地方创建。然而JS就不是这样，变量实际创建的位置取决于你如何声明它，而ES6提供了额外选择以便你能更轻易地控制变量的作用域。</p>
+        <p>变量声明的工作方式历来是JS编程中最微妙的部分之一。在大多数类C语言中，变量（或绑定）总是在它被声明的地方创建。然而JS就不是这样，变量实际创建的位置取决于你如何声明它，而ES6提供了额外选择以便你能更轻易地控制变量的作用域。</p>
 <h2 id="var声明与变量提升"><a href="#var声明与变量提升" class="headerlink" title="var声明与变量提升"></a>var声明与变量提升</h2><p>使用var关键字声明的变量，无论其实际声明位置在何处，都会被视为声明于所在函数的顶部（如果声明不在任意函数内，则视为在全局作用域的顶部），这种方式就是变量提升。<br>如下例所示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getValue(condition) &#123;</span><br><span class="line">    <span class="keyword">if</span> (condition) &#123;</span><br><span class="line">        var value = <span class="string">"blue"</span>;</span><br><span class="line">        // 其他代码</span><br><span class="line">        <span class="built_in">return</span> value;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        // value 在此处可访问，值为 undefined</span><br><span class="line">        <span class="built_in">return</span> null;</span><br><span class="line">    &#125;</span><br><span class="line">    // value 在此处可访问，值为 undefined</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getValue</span>(<span class="params">condition</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (condition) &#123;</span><br><span class="line">        <span class="keyword">var</span> value = <span class="string">"blue"</span>;</span><br><span class="line">        <span class="comment">// 其他代码</span></span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// value 在此处可访问，值为 undefined</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// value 在此处可访问，值为 undefined</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>如果不太熟悉 JS ，或许会认为仅当 condition 的值为 true 时，变量 value 才会被创建。但实际上，value 无论如何都会被创建。 JS 引擎在后台对 getValue 函数进行了调整，就像这样：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getValue(condition) &#123;</span><br><span class="line">    var value;</span><br><span class="line">    <span class="keyword">if</span> (condition) &#123;</span><br><span class="line">        value = <span class="string">"blue"</span>;</span><br><span class="line">        // 其他代码</span><br><span class="line">        <span class="built_in">return</span> value;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">return</span> null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getValue</span>(<span class="params">condition</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> value;</span><br><span class="line">    <span class="keyword">if</span> (condition) &#123;</span><br><span class="line">        value = <span class="string">"blue"</span>;</span><br><span class="line">        <span class="comment">// 其他代码</span></span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>value 变量的声明被提升到了顶部，而初始化工作则保留在原处。这意味着在 else 分支内value 变量也是可访问的，此处它的值会是 undefined ，因为它并没有被初始化。</strong></p>
 <h2 id="块级声明"><a href="#块级声明" class="headerlink" title="块级声明"></a>块级声明</h2><p>块级声明即让所声明的变量在指定块的作用域外无法被访问。块级作用域（又被称为词法作用域）在如下情况被创建：</p>
@@ -467,32 +477,32 @@
 <li>在一个代码块（由一对花括号包裹）内部</li>
 </ul>
 <h3 id="let声明"><a href="#let声明" class="headerlink" title="let声明"></a>let声明</h3><p>let声明与var的语法一致，但是let声明不会被提升到当前代码块的顶部，需要手动将let声明放置到顶部，以便让变量在整个代码块内部使用。<strong>let声明会将变量的作用域限制在当前代码块中。</strong>范例如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getValue(condition) &#123;</span><br><span class="line">    <span class="keyword">if</span> (condition) &#123;</span><br><span class="line">        <span class="built_in">let</span> value = <span class="string">"blue"</span>;</span><br><span class="line">        // 其他代码</span><br><span class="line">        <span class="built_in">return</span> value;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        // value 在此处不可用</span><br><span class="line">        <span class="built_in">return</span> null;</span><br><span class="line">    &#125;</span><br><span class="line">    // value 在此处不可用</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getValue</span>(<span class="params">condition</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (condition) &#123;</span><br><span class="line">        <span class="keyword">let</span> value = <span class="string">"blue"</span>;</span><br><span class="line">        <span class="comment">// 其他代码</span></span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// value 在此处不可用</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// value 在此处不可用</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="禁止重复声明"><a href="#禁止重复声明" class="headerlink" title="禁止重复声明"></a>禁止重复声明</h3><p><strong>如果一个标识符已经在代码块内部被定义，那么在此代码块内使用同一个标识符进行let声明就会导致抛出错误。</strong><br>但是在嵌套的作用域内使用let声明一个同名的新变量，则不会抛出错误。范例如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var count = 30;</span><br><span class="line"><span class="comment"># 抛出错误</span></span><br><span class="line"><span class="built_in">let</span> count = 40;</span><br><span class="line"><span class="comment"># 不会抛出错误</span></span><br><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">    <span class="built_in">let</span> count = 40;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> count = <span class="number">30</span>;</span><br><span class="line"><span class="comment">// 抛出错误</span></span><br><span class="line"><span class="keyword">let</span> count = <span class="number">40</span>;</span><br><span class="line"><span class="comment">// 不会抛出错误</span></span><br><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">40</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="常量声明"><a href="#常量声明" class="headerlink" title="常量声明"></a>常量声明</h3><p>使用const语法进行声明的变量是常量，在设置完成后就不能再被改变，正因为如此，所有的const变量都需要在声明时进行初始化。示例如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 有效的常量</span></span><br><span class="line">const maxItems = 30;</span><br><span class="line"><span class="comment"># 语法错误；未进行初始化</span></span><br><span class="line">const name;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 有效的常量</span></span><br><span class="line"><span class="keyword">const</span> maxItems = <span class="number">30</span>;</span><br><span class="line"><span class="comment">// 语法错误；未进行初始化</span></span><br><span class="line"><span class="keyword">const</span> name;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>对比常量声明与let声明： 常量声明与let声明一样，都是块级声明。即常量在声明它们的语句块外部是无法访问的，并且声明也不会被提升；同样不能重复声明。</li>
 <li>使用const声明对象：const声明会阻止对于变量绑定与变量自身值的修改，意味着const声明并不会阻止对变量成员的修改。如下例所示：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const person = &#123;</span><br><span class="line">    name: <span class="string">"Nicholas"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment"># 工作正常</span></span><br><span class="line">person.name = <span class="string">"Greg"</span>;</span><br><span class="line"><span class="comment"># 抛出错误</span></span><br><span class="line">person = &#123;</span><br><span class="line">name: <span class="string">"Greg"</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">    name: <span class="string">"Nicholas"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 工作正常</span></span><br><span class="line">person.name = <span class="string">"Greg"</span>;</span><br><span class="line"><span class="comment">// 抛出错误</span></span><br><span class="line">person = &#123;</span><br><span class="line">name: <span class="string">"Greg"</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>上例中，修改 person.name 是可能的，并不会抛出错误，因为该操作只修改了 person 对象的成员，而没有修改 person 的绑定值。当代码试图为 person 对象自身赋值时（这会改变变量绑定），就会导致错误。</p>
 <h3 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h3><p>使用let或const声明的变量在达到声明处之前是无法访问的，试图访问会导致一个引用错误。</p>
 <h2 id="循环中的块级绑定"><a href="#循环中的块级绑定" class="headerlink" title="循环中的块级绑定"></a>循环中的块级绑定</h2><h3 id="循环内的函数"><a href="#循环内的函数" class="headerlink" title="循环内的函数"></a>循环内的函数</h3><p>长期以来，var的特点是使得循环变量在循环作用域之外仍然可被访问，于是在循环内创建函数就变得很有问题。例如下例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var funcs = [];</span><br><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">    funcs.push(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">funcs.forEach(<span class="keyword">function</span>(func) &#123;</span><br><span class="line">    func(); <span class="comment"># 输出数值 "10" 十次</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> funcs = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    funcs.push(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">funcs.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">func</span>) </span>&#123;</span><br><span class="line">    func(); <span class="comment">// 输出数值 "10" 十次</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <p><strong>上例预期为这段代码会输出0到9的数值，但它却在同一行将数值10输出了十次。因为变量i在循环的每次迭代中都被共享了，意味着循环内创建的那些函数都拥有对于同一变量的引用。</strong></p>
 <h3 id="循环内的let声明"><a href="#循环内的let声明" class="headerlink" title="循环内的let声明"></a>循环内的let声明</h3><p>let是属于局部作用域声明，因此使用let代替var将避免上面的问题。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var funcs = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">    funcs.push(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">funcs.forEach(<span class="keyword">function</span>(func) &#123;</span><br><span class="line">    func(); <span class="comment">#从 0 到 9 依次输出</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> funcs = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    funcs.push(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">funcs.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">func</span>) </span>&#123;</span><br><span class="line">    func(); <span class="comment">// 从 0 到 9 依次输出</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p><strong>在循环中let声明每次都创建了一个新的i变量，因此在循环内部创建的函数获得了各自的i副本，而每个i副本的值都在每次循环迭代声明变量的时候被确定了。</strong></p>
 <h3 id="循环内的常量声明"><a href="#循环内的常量声明" class="headerlink" title="循环内的常量声明"></a>循环内的常量声明</h3><p>ES6中没有明确禁止在循环中使用const声明，但是它会根据循环方式的不同而有不同行为。在常规的for循环中，可以在初始化时使用const，但循环会在你试图改变该变量的值时抛出错误。例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var funcs = [];</span><br><span class="line"><span class="comment"># 在一次迭代后抛出错误</span></span><br><span class="line"><span class="keyword">for</span> (const i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">    funcs.push(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> funcs = [];</span><br><span class="line"><span class="comment">// 在一次迭代后抛出错误</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    funcs.push(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>const 变量在 for-in 或 for-of 循环中使用时，与 let 变量效果相同。</strong>const 能够在 for-in 与 for-of 循环内工作，是因为循环为每次迭<br>代创建了一个新的变量绑定，而不是试图去修改已绑定的变量的值</p>
 <h2 id="全局块级绑定"><a href="#全局块级绑定" class="headerlink" title="全局块级绑定"></a>全局块级绑定</h2><p>在全局作用域上使用var时，会创建一个新的全局变量，并成为全局对象（在浏览器中是window）的一个属性，即使用var可能会无意覆盖一个已有的全局属性。<br>在全局作用域上使用let或const时，虽然在全局作用域上会创建新的绑定，但不会有任何属性被添加到全局对象上。即不能使用let或const来覆盖一个全局变量，只能将其屏蔽。</p>
